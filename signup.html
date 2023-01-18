@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+
+<style>
+    .main{
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    #signup{
+    text-align: center;
+    }
+    .inf{
+       text-align: justify; 
+    }
+
+    #benefits{
+      margin: auto;
+    }
+</style>
+
+
+</head>
+<body>
+   
+    <div class="main" >
+<div id="signup" >
+    <h1>Create Your Account</h1>
+<p>Alredy have an account? <a href="Dell signin.html"></a> Sign In </p>
+
+
+<form action="">
+    <input type="text" id="first" placeholder="First Name" >
+    <input type="text" placeholder="Last Name" id="last">
+    <br><br>
+    <input type="email" placeholder="Email Address" id="email" >
+        <br><br>
+   <input type="password" placeholder="Password" id="password" />
+     <br><br>
+</form>
+ 
+
+<div class="inf">
+    
+    <p>Passwords must be between 8 and 20 characters in length and contain 1 upper case letter, 1 lower case letter, and 1 number.</p>
+    
+     <p>Dell Technologies and its group of companies (“Dell”) would like to stay in touch and update you on products, services, solutions, exclusive offers, and special events. For more details about our information practices, see our Privacy Statement. You can unsubscribe at any time.</p>
+   
+    <h5>Yes, I would like Dell to send me email communications</h5>
+    <p>By clicking “Create Account”, you agree to our Terms & Conditions.</p>
+     
+</div>
+<div id="end" >
+  <input type="button" value="Create Account" id="create account">
+ <input type="button" value="Cancel" id="cancel">
+</div>
+
+</div>
+
+
+<div  id="benefits">
+    <h1>Dell Account Benefits</h1>
+    <p>My Account is an easy, more centralized way to manage your tech.sign up now! </p>
+     <div id="bene2" >
+    <div id="order">
+        <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-1-tracking-36x36.png" alt="">
+        <h6>Order Tracking</h6>
+        <p>Manage orders, track shipping status and view support history</p>
+    </div>
+    <div id="commu">
+        <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-2-mail-36x36.png" alt="">
+        <h6>Manage Communications</h6>
+        <p>Manage marketing and communications preferences</p>
+    </div>
+    <div id="profile">
+        <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-3-profile-36x36.png" alt="">
+        <h6>Profile Setting</h6>
+        <p>Save your favorite payment method and shipping details for quicker checkout</p>
+    </div>
+</div>
+    <div>
+        <img src="https://i.dell.com/sites/csimages/Banner_Imagery/all/bannerimage460x460.png" alt="">
+    </div>
+</div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+<script>
+
+    var userDetails=JSON.parse(localStorage.getItem("userData")) || [];
+
+let acreate=document.querySelector("create account")
+ acreate.addEventListener("click", createaccount);
+
+function createAccount(){
+
+     var fname=document.querySelector("first").value;
+     var lname=document.querySelector("last").value;
+    var email=document.querySelector("email").value;
+    var password=document.querySelector("password").value;
+
+    if(
+        fname=="" ||
+        lname=="" ||
+        email=="" ||
+        password==""
+        ){
+        alert("Please Enter valid Details For Create Account");
+    }else{
+        let obj={
+            
+            fname:fname,
+            lname:lname,
+            email:email,
+            password:password,
+        };
+        userDetails.push(obj);
+
+        localStorage.setItem("userData",JSON.stringify(userDetails));
+        alert("Account Created Succesfully!")
+    }
+}
+
+</script>
