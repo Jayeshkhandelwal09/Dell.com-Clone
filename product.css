@@ -3,6 +3,7 @@
     margin:30px;
 }
 .filter_div{
+
     width:30%;
     /* border:1px solid green; */
     padding:30px;
@@ -10,13 +11,18 @@
 .card{
     display: flex;
     border:1px solid rgb(214, 208, 208);
+    width:15%;
+}
+.card{
     margin:30px;
 }
 .laptop_title{
     margin-top:20px;
     color: rgb(70, 70, 216);
     font-weight: bolder;
+
     font-size: 20px;
+
   font-family: 'Open Sans', sans-serif;
     font-family: 'Playfair Display', serif; ;
 
@@ -36,6 +42,7 @@
 }
 
 .left{
+
     font-family: 'roboto',Arial,Helvetica,sans-serif;
     margin-top:-8px;
 
@@ -55,6 +62,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Work Sans', sans-serif;
+
 }
 
 .card>div{
@@ -68,6 +76,7 @@ font-family: 'Work Sans', sans-serif;
 
 .green{
     color:rgb(128, 185, 71)
+
 }
 
 .bt{
@@ -97,6 +106,7 @@ font-family: 'Playfair Display', serif;
     /* border:none; */
 padding:15px;
 border-radius: 10px;;
+
 }
 
 #product{
@@ -164,4 +174,5 @@ border-radius: 10px;;
 .card_right{
     width:40%;
     /* border:1px solid blue; */
+
 }

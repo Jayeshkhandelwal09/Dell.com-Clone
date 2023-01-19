@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.first{
+    display: flex;
+}
+
+.logo{
+    width: 250px;
+    height: 56px;
+    margin: 5px;
+}
+.logo img{
+ width: 100%;
+ margin-top: 6px;
+}
+
+#Search{
+   
+    width: 550px;
+    align-items: center;
+    margin-left: 35px;
+    padding-left: 20px;
+}
+
+#Search input{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 450px;
+   margin-top: 19px;
+   height: 30px;
+   font-size: 15px;
+   /* border-radius: 4px; */
+   text-indent: 15px;
+   margin-left: 20px;
+}
+
+.pages{
+    display: flex;
+    width: 35%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pages img{
+    margin-left: 35px;
+    margin-top: 4px;
+}
+
+.fp{
+
+    font-size: 14px;
+    line-height: 20px;
+    color: #636363;
+    margin-right: 10px;
+}
+.menu-bar{
+    margin-left: 20px;
+  
+}
+
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #636363;
+    font-size: 15px;
+}
+
+.menu-bar ul li{
+    margin-left: 20px;
+    padding: 12px;  
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #636363;
+}
+
+.sub-menu-1{
+    display: none;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+.sub-menu-1 p{
+   /* margin-top: 10px; */
+    padding: 12px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    /* margin-top: 15px; */
+
+    background-color: black;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* third */
+
+.compo-items{
+    display: flex;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+
+.compo-items div p{
+    margin-top: 10px ;
+}
+
+.compo-img{
+    width: 40px;
+    margin: auto;
+}
+
+.compo-img img{
+    width: 70%;
+}
+
+
+
+/* Main section */
+
+/* first Container */
+
+.republic{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.data{
+    width: 50%;
+    padding: 30px;
+    
+}
+
+.data p{
+    font-size: 20px;
+    line-height: 28px;
+  
+}
+
+.data h2{
+    font-size: 40px;
+    line-height: 48px;
+    color: #636363;
+    font-weight:lighter;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.data button{
+    width: 112px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 500px;
+    line-height: 24px;
+    background-color: #0063b8;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    margin-top: 25px;
+}
+
+#btn1{
+    width: 112px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 500px;
+    line-height: 24px;
+    background-color: white;
+    border: 1px solid #0063b8;
+    color: #0063b8;
+    border-radius: 2px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.data-img{
+    width: 50%;
+}
+
+.data-img img{
+    width: 100%;
+}
+
+
+.welcome{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+
+}
+
+.heading3{
+    font-size: 32px;
+    line-height: 40px;
+    padding: 10px;
+    font-weight: lighter;
+    color: #000;
+}
+
+.imgdiv{
+    display: flex;
+    height: 150px;
+}
+.imgdiv div{
+    width: 90px;
+}
+
+.imgdiv img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#head5{
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 10px;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.heading5 h5{
+    font-size: 20px;
+    line-height: 28px;
+    padding: 20px;
+    font-weight: lighter;
+}
+
+.heading5{
+    height: 150px;
+}
+
+.welcome div p{
+    font-size: 20px;
+    line-height: 28px;
+    color: #0672cb;
+    margin-left: 10px;
+}
+
+.shadow{
+    box-shadow: 3px 3px 5px grey;
+    width: 33%;
+}
+
+#h3{
+    font-size: 32px;
+    line-height: 40px;
+    color: #444444;
+    font-weight: lighter;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+/* third container */
+
+.inspiron{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inspiron #ins-img{
+    width: 45%;
+}
+
+#ins-img img{
+    width: 100%;
+}
+
+.ins-data{
+    width: 45%;
+    justify-content: center;
+    
+}
+
+.ins-data #ins-p1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    color: #0a0809;
+    margin-top: 130px;
+    margin-bottom: 20px;
+}
+
+.ins-data h3{
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+    
+}
+
+.ins-data h5{
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+
+}
+
+
+.ins-data p{
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#ins-span{
+    display: flex;
+}
+
+
+#ins-span h5{
+    font-size: 20px;
+    line-height: 28px;
+    color: #0672cb;
+    
+    
+}
+
+#ins-span span{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+   
+}
+
+#h51{
+    margin-left: 200px;
+}
+
+
+/* fourth container */
+.Alienware{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Alienware #ali-img{
+    width: 45%;
+}
+
+#ali-img img{
+    width: 100%;
+}
+
+.ali-data{
+    width: 45%;
+    justify-content: center;
+    
+}
+
+.ali-data #ali-p1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    color: #0a0809;
+    margin-top: 130px;
+    margin-bottom: 20px;
+}
+
+.ali-data h3{
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+    
+}
+
+.ali-data h5{
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+
+}
+
+
+.ali-data p{
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#ali-span{
+    display: flex;
+}
+
+
+#ali-span h5{
+    font-size: 20px;
+    line-height: 28px;
+    color: #0672cb;
+    
+    
+}
+
+#ali-span span{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+   
+}
+
+#ali-h51{
+    margin-left: 200px;
+}
+

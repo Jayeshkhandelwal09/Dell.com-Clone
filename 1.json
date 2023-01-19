@@ -9,7 +9,9 @@
         "specs" : "specs",
         "Customise": "Customise",
         "Processor" : "12th Gen Intel® Core™ i5-1235U",
+
         "OS" : "Windows 11 Home Single",
+
         "Graphics" : "Intel® Iris® Xe Graphics",
         "Memory":"8 GB, 2 x 4 GB, DDR4, 3200 MHz",
         "Storage":"512 GB, M.2, PCIe NVMe, SSD",
@@ -172,6 +174,7 @@
         "Display":"39.6-cm. display Full HD (1920X1080)",
         "useless":"₹1000 discount on CreditCard/UPI/NB",
         "online":"Online Price ₹ 58,490.00",
+
         "price":" 54990",
         "saving":" ₹ 3,500.00 (6%)",
         "GST":"Price inclusive of GST. Free Delivery.",

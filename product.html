@@ -3,6 +3,7 @@
     <title>Product</title>
    <link rel="stylesheet" href="product.css">
    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
  
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +23,7 @@
  <div class="page">
   <div class="filter_div">
           <h1 class="headd">Filter Result</h1>
+
 
           <div class="screen_filter">
                   <h3>Screen Size</h3>
@@ -149,7 +151,9 @@ let sorting_arr=[]
       <div class="card-list">
       ${
         data.map((elem)=>
+
           creatingcard(elem)
+
           // console.log(elem)
         ).join("")
       }
@@ -161,6 +165,7 @@ let sorting_arr=[]
     }
 
     // data.map((element) => {
+
 
 
 
@@ -188,6 +193,7 @@ let sorting_arr=[]
         
         
         
+
         let card=`
         <div class="card">
 
@@ -203,6 +209,7 @@ let sorting_arr=[]
                                                             <p > ${rating}</p>
                                                       </div>
                                                           <div class="speci">
+
                                                           <p class="bold"> ${specs}
                                                              <span class="blue"> Customize 
                                                           </span> 
@@ -226,10 +233,12 @@ let sorting_arr=[]
                                                                           </div>
                                                                         <div>
                                                                           <p> <span class="left r"> Display </span> <span  class="lef">   ${display}    </span>
+
                                                                           </div>
                                                           </div>
                                   </div>
               
+
          <div class="card_right">
                  <p class="opaque"> ${useless}</p>
                  <p > ${online}</p>
@@ -246,11 +255,13 @@ let sorting_arr=[]
                                                                     
               </div>
 
+
         `
         return card
 
 
         }
+
 
 
 
@@ -267,6 +278,7 @@ let sorting_arr=[]
 
 //----------------------------------- sorting-----------------------------------
 
+
 document.querySelector("#sorting").addEventListener("change",(e)=>{
   let sort=e.target.value
 
@@ -276,6 +288,7 @@ document.querySelector("#sorting").addEventListener("change",(e)=>{
     }
   else if(e.target.value=="Lowest Price"){
      let newData=sorting_arr.sort(function(a,b){
+
  return +a.price - +b.price
 
 
@@ -295,6 +308,7 @@ displayproduct(newData)
   }
 
 })
+
 
 
 
