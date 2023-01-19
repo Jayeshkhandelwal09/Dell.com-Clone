@@ -240,12 +240,13 @@ document.querySelector("#sorting").addEventListener("change",(e)=>{
   else if(e.target.value=="Lowest Price"){
      let newData=sorting_arr.sort(function(a,b){
 //  return +b.price - +a.price
-console.log(a.price,b.price)
+console.log(+a.price- +b.price)
 let x=+a.price
 let y=+b.price
-console.log(typeof(x),x , typeof(y),x,y,eval(+x - +y))
-console.log(eval(a.price - b.price))
-
+// console.log(typeof(x),x , typeof(y),x,y,eval(+x - +y))
+// console.log(typeof(+a.price) , typeof(+b.price))
+// let z=a-b
+console.log(x-y)
 })
 // console.log(sorting_arr)
 // console.log(newData)
