@@ -3,18 +3,26 @@
     margin:30px;
 }
 .filter_div{
-    width:15%;
+
+    width:30%;
+    /* border:1px solid green; */
+    padding:30px;
 }
 .card{
     display: flex;
-    border:1px solid red;
+    border:1px solid rgb(214, 208, 208);
+    width:15%;
+}
+.card{
     margin:30px;
 }
 .laptop_title{
     margin-top:20px;
     color: rgb(70, 70, 216);
     font-weight: bolder;
-    font-size: 25px;
+
+    font-size: 20px;
+
   font-family: 'Open Sans', sans-serif;
     font-family: 'Playfair Display', serif; ;
 
@@ -34,7 +42,27 @@
 }
 
 .left{
-    font-family: 'Playfair Display', serif; ;
+
+    font-family: 'roboto',Arial,Helvetica,sans-serif;
+    margin-top:-8px;
+
+    
+}
+.lef{
+    font-family: 'Barlow', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Work Sans', sans-serif;
+}
+.card_right{
+    line-height: 20px;
+    font-family: 'Barlow', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Work Sans', sans-serif;
+
 }
 
 .card>div{
@@ -47,7 +75,8 @@
 }
 
 .green{
-    color:rgb(161, 203, 98)
+    color:rgb(128, 185, 71)
+
 }
 
 .bt{
@@ -67,10 +96,83 @@ font-family: 'Playfair Display', serif;
 
 .sort{
     text-align: end;
-    margin:50px 50px 10px;
+    margin:50px 150px 10px;
+    color:rgb(41, 59, 74)
+}
+.sort>select{
+    border:1px solid rgba(6, 29, 78, 0.834);
 }
 #sorting{
     /* border:none; */
 padding:15px;
 border-radius: 10px;;
+
+}
+
+#product{
+    /* border:1px solid orange; */
+    margin:20px;
+}
+
+
+/* --------card----------- */
+.pic{
+    /* border:10px solid yellow; */
+    width:35%;
+    /* height:300px; */
+}
+.pic img{
+    width:100%;
+    margin-top:50px;
+    
+}
+
+.card_left{
+    /* border:1px solid blue; */
+    /* height:300px; */
+    line-height: 0.9;
+    padding:10px;
+}
+
+/* --------filter------ */
+.headd{
+
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Work Sans', sans-serif;
+}
+.filter_div>div{
+    background-color: rgb(236, 239, 241);
+    padding:5px;
+    margin:5px;
+}
+
+.filter_div h3{
+    color:rgb(67, 80, 172);
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 690;
+    font-size:20px;
+}
+/* --------specs spacing ---------*/
+
+.r{
+    margin-right:30px;
+}
+.r1{
+    margin-right:70px;
+}
+
+.speci{
+    width:100%;
+    /* border:1px solid red; */
+}
+
+.card_right{
+    width:40%;
+    /* border:1px solid blue; */
+
 }
