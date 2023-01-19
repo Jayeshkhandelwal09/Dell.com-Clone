@@ -1,0 +1,303 @@
+<html>
+  <head>
+    <title>Product</title>
+   <link rel="stylesheet" href="product.css">
+   <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+   
+  </head>
+  <body>
+    <div class="sort">
+      <span>Sort By</span>
+      <select name="" id="sorting">
+        <option value="Relevance">Relevance</option>
+        <option value="Lowest Price">Lowest Price</option>
+        <option value="Highest Price">Highest Price</option>
+      </select>
+    </div>
+ <div class="page">
+  <div class="filter_div">
+          <h1 class="headd">Filter Result</h1>
+
+          <div class="screen_filter">
+                  <h3>Screen Size</h3>
+                     
+                  <div>
+                    <input type="checkbox">
+                    <span>43.18CM (17 inch)</span>
+                  </div>
+                  <div>
+                    <input type="checkbox">
+                    <span>38.10CM (15 inch)</span>
+                  </div>
+                  <div>
+                    <input type="checkbox">
+                    <span>35.56CM (14 inch)</span>
+                  </div>
+           </div>
+           
+          <div class="processor_filter">
+                  <h3>Processor</h3>
+
+                  <div>
+                    <input type="checkbox">
+                    <span>All Intel Processors</span>
+                  </div>
+                  <div>
+                    <input type="checkbox">
+                    <span>Intel Core i9 K Series</span>
+                  </div>
+                  <div>
+                    <input type="checkbox">
+                    <span>Intel Core i9</span>
+                  </div>
+                  <div>
+                    <input type="checkbox">
+                    <span>Intel Core i7</span>
+                  </div>
+                  <div>
+                    <input type="checkbox">
+                    <span>All AMD Processors</span>
+                  </div>
+           
+           </div>
+          <div class="price_filter">
+            <h3>Price</h3>
+              <div>
+                <input type="checkbox">
+                <span>₹80,000</span>
+              </div>
+          </div>
+          <div class="memory_filter">
+            <h3>Memory (RAM)</h3>
+              <div>
+                <input type="checkbox">
+                <span>32GB</span>
+              </div>
+              <div>
+                <input type="checkbox">
+                <span>16GB</span>
+              </div>
+          </div>
+
+          <div class="storage_filter">
+            <h3>Storage Size</h3>
+              <div>
+                <input type="checkbox">
+                <span>1 TB</span>
+              </div>
+              <div>
+                <input type="checkbox">
+                <span>512 GB</span>
+              </div>
+          </div>
+
+          <div class="operatingsystem_filter">
+            <h3>Operating System</h3>
+              <div>
+                <input type="checkbox">
+                <span>Windows 11
+                </span>
+              </div>
+          </div>
+
+          <div class="features_filter">
+            <h3>Features</h3>
+              <div>
+                <input type="checkbox">
+                <span>Lightweight</span>
+              </div>
+              
+              </div>
+
+
+
+  </div>
+  <div id="product"></div>
+ </div>
+<script>
+  let product= document.getElementById("product")
+let url = "1.json"
+
+let sorting_arr=[]
+
+
+
+
+  fetch(url)
+  .then((res)=>{
+    return res.json()
+  })
+  .then((data)=>{
+    console.log(data.laptops)
+    sorting_arr=data.laptops
+    displayproduct(data.laptops)
+   
+    console.log(data.laptops)
+  })
+
+  function displayproduct(data){
+
+
+
+    let cardList=`
+    
+      <div class="card-list">
+      ${
+        data.map((elem)=>
+          creatingcard(elem)
+          // console.log(elem)
+        ).join("")
+      }
+
+      </div>
+    `
+
+      document.querySelector("#product").innerHTML=cardList
+    }
+
+    // data.map((element) => {
+
+
+
+       function creatingcard(elem){
+
+        // image,name,rating,specs,processor,os,graphics,memory,storage,display,useless,online,price,saving,instock,delivery,special,emi
+        let image=elem.image;
+        let name=elem.name;
+        let rating=elem.rating;
+        let specs=elem.specs;
+        let processor=elem.Processor.substring(0,15);
+        let os=elem.OS;
+        let graphics=elem.Graphics.substring(0,15);
+        let memory=elem.Memory.substring(0,15);
+        let storage=elem.Storage;
+        let display=elem.Display;
+        let useless=elem.useless;
+        let online=elem.online;
+        let price=elem.price;
+        let saving=elem.saving;
+        let instock=elem.instock;
+        let delivery=elem.delivery;
+        let special=elem.special;
+        let emi=elem.Emi;
+        
+        
+        
+        let card=`
+        <div class="card">
+
+                                                    <div class="pic">
+                                                                <img src="${image}" alt="laptop"/>
+                                                    </div>
+
+             
+                                <div class="card_left">
+                                                      <div class="card_head">
+                                                                
+                                                            <p class="laptop_title"> ${name}</p>
+                                                            <p > ${rating}</p>
+                                                      </div>
+                                                          <div class="speci">
+                                                          <p class="bold"> ${specs}
+                                                             <span class="blue"> Customize 
+                                                          </span> 
+                                                             
+                                                           </p>
+                                                          <hr>
+                                                                        <div>
+                                                                        <span class="left r"> Processor </span> <span>       </span>     <span  class="lef"> ${processor} </span>
+                                                                        </div>
+                                                                      <div>
+                                                                         <span class="left r1"> OS </span>  <span class="lef">    ${os}    </span>
+                                                                        </div>
+                                                                        <div>
+                                                                          <span class="left r"> Graphics </span> <span  class="lef">    ${graphics}    </span>
+                                                                          </div>
+                                                                        <div>
+                                                                           <span class="left r"> Memory </span>  <span  class="lef"> ${memory}    </span>
+                                                                          </div>
+                                                                        <div>
+                                                                          <p> <span class="left r"> Storage </span>  <span  class="lef">   ${storage}   </span>
+                                                                          </div>
+                                                                        <div>
+                                                                          <p> <span class="left r"> Display </span> <span  class="lef">   ${display}    </span>
+                                                                          </div>
+                                                          </div>
+                                  </div>
+              
+         <div class="card_right">
+                 <p class="opaque"> ${useless}</p>
+                 <p > ${online}</p>
+                 <p class="bolder"> ₹ ${price}</p>
+                 <p> Save <span class="green">${saving}</span></p>
+                 <p> ${instock}</p>
+                 <p class="blue"> ${delivery}</p>
+                 <p class="bold"> ${special}</p>
+                <p> ${emi}</p>
+                 <div class="buttons"> 
+                  <button onclick="addtocart(${elem})" class="bt"> Add to Cart </button>  
+                  </div>
+          </div>
+                                                                    
+              </div>
+
+        `
+        return card
+
+
+        }
+
+
+
+
+
+        // --------------cart-------------------
+                function addtocart(elem){
+                console.log((JSON.stringify(elem)))
+
+
+
+
+        }
+
+//----------------------------------- sorting-----------------------------------
+
+document.querySelector("#sorting").addEventListener("change",(e)=>{
+  let sort=e.target.value
+
+  if(e.target.value=="Relevance"){
+    displayproduct(sorting_arr)
+
+    }
+  else if(e.target.value=="Lowest Price"){
+     let newData=sorting_arr.sort(function(a,b){
+ return +a.price - +b.price
+
+
+})
+
+displayproduct(newData)
+  }
+
+  else if(e.target.value=="Highest Price"){
+
+    let newData=sorting_arr.sort(function(a,b){
+ return +b.price - +a.price
+
+
+}) 
+displayproduct(newData)
+  }
+
+})
+
+
+
+  </script>
+  </body>
+</html>
