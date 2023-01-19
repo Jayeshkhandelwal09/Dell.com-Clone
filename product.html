@@ -2,7 +2,8 @@
   <head>
     <title>Product</title>
    <link rel="stylesheet" href="product.css">
-   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
  
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,8 @@
     </div>
  <div class="page">
   <div class="filter_div">
-          <h1>Filter Result</h1>
+          <h1 class="headd">Filter Result</h1>
+
 
           <div class="screen_filter">
                   <h3>Screen Size</h3>
@@ -149,7 +151,9 @@ let sorting_arr=[]
       <div class="card-list">
       ${
         data.map((elem)=>
-          creatingcard(elem.image,elem.name,elem.rating,elem.specs,elem.Processor,elem.OS,elem.Graphics,elem.Memory,elem.Storage,elem.Display,elem.useless,elem.online,elem.price,elem.saving,elem.instock,elem.delivery,elem.special,elem.Emi)
+
+          creatingcard(elem)
+
           // console.log(elem)
         ).join("")
       }
@@ -164,8 +168,31 @@ let sorting_arr=[]
 
 
 
-       function creatingcard(image,name,rating,specs,processor,os,graphics,memory,storage,display,useless,online,price,saving,instock,delivery,special,emi){
 
+       function creatingcard(elem){
+
+        // image,name,rating,specs,processor,os,graphics,memory,storage,display,useless,online,price,saving,instock,delivery,special,emi
+        let image=elem.image;
+        let name=elem.name;
+        let rating=elem.rating;
+        let specs=elem.specs;
+        let processor=elem.Processor.substring(0,15);
+        let os=elem.OS;
+        let graphics=elem.Graphics.substring(0,15);
+        let memory=elem.Memory.substring(0,15);
+        let storage=elem.Storage;
+        let display=elem.Display;
+        let useless=elem.useless;
+        let online=elem.online;
+        let price=elem.price;
+        let saving=elem.saving;
+        let instock=elem.instock;
+        let delivery=elem.delivery;
+        let special=elem.special;
+        let emi=elem.Emi;
+        
+        
+        
 
         let card=`
         <div class="card">
@@ -182,53 +209,75 @@ let sorting_arr=[]
                                                             <p > ${rating}</p>
                                                       </div>
                                                           <div class="speci">
-                                                          <p class="bold"> ${specs} <span class="blue"> Customize 
-                                                          </span>                                                <i class="fa-regular fa-arrow-right-long"></i>                                               </p>
+
+                                                          <p class="bold"> ${specs}
+                                                             <span class="blue"> Customize 
+                                                          </span> 
+                                                             
+                                                           </p>
                                                           <hr>
                                                                         <div>
-                                                                        <span class="left"> Processor </span> <span>       </span>     <span> ${processor} </span>
+                                                                        <span class="left r"> Processor </span> <span>       </span>     <span  class="lef"> ${processor} </span>
                                                                         </div>
                                                                       <div>
-                                                                         <span class="left"> OS </span> <p> ${os}</p>
+                                                                         <span class="left r1"> OS </span>  <span class="lef">    ${os}    </span>
                                                                         </div>
                                                                         <div>
-                                                                          <span class="left"> Graphics </span> <p> ${graphics}</p>
+                                                                          <span class="left r"> Graphics </span> <span  class="lef">    ${graphics}    </span>
                                                                           </div>
                                                                         <div>
-                                                                           <span class="left"> Memory </span> <p>${memory}</p>
+                                                                           <span class="left r"> Memory </span>  <span  class="lef"> ${memory}    </span>
                                                                           </div>
                                                                         <div>
-                                                                          <p> <span class="left"> Storage </span> ${storage}</p>
+                                                                          <p> <span class="left r"> Storage </span>  <span  class="lef">   ${storage}   </span>
                                                                           </div>
                                                                         <div>
-                                                                          <p> <span class="left"> Display </span> ${display}</p>
+                                                                          <p> <span class="left r"> Display </span> <span  class="lef">   ${display}    </span>
+
                                                                           </div>
                                                           </div>
                                   </div>
               
-                                                                    <div class="card_right">
-                                                                          <p class="opaque"> ${useless}</p>
-                                                                          <p > ${online}</p>
-                                                                          <p class="bolder"> ${price}</p>
-                                                                          <p> Save <span class="green">${saving}</span></p>
-                                                                          <p> ${instock}</p>
-                                                                          <p class="blue"> ${delivery}</p>
-                                                                          <p class="bold"> ${special}</p>
-                                                                          <p> ${emi}</p>
-                                                                          <div class="buttons"> <button class="bt"> Add to Cart </button>    </div>                     </div>
+
+         <div class="card_right">
+                 <p class="opaque"> ${useless}</p>
+                 <p > ${online}</p>
+                 <p class="bolder"> ₹ ${price}</p>
+                 <p> Save <span class="green">${saving}</span></p>
+                 <p> ${instock}</p>
+                 <p class="blue"> ${delivery}</p>
+                 <p class="bold"> ${special}</p>
+                <p> ${emi}</p>
+                 <div class="buttons"> 
+                  <button onclick="addtocart(${elem})" class="bt"> Add to Cart </button>  
+                  </div>
+          </div>
                                                                     
               </div>
-        
-       
-        
-        
+
+
         `
         return card
 
 
         }
 
-// sorting
+
+
+
+
+
+        // --------------cart-------------------
+                function addtocart(elem){
+                console.log((JSON.stringify(elem)))
+
+
+
+
+        }
+
+//----------------------------------- sorting-----------------------------------
+
 
 document.querySelector("#sorting").addEventListener("change",(e)=>{
   let sort=e.target.value
@@ -239,21 +288,28 @@ document.querySelector("#sorting").addEventListener("change",(e)=>{
     }
   else if(e.target.value=="Lowest Price"){
      let newData=sorting_arr.sort(function(a,b){
-//  return +b.price - +a.price
-console.log(a.price,b.price)
-let x=+a.price
-let y=+b.price
-console.log(typeof(x),x , typeof(y),x,y,eval(+x - +y))
-console.log(eval(a.price - b.price))
+
+ return +a.price - +b.price
+
 
 })
-// console.log(sorting_arr)
-// console.log(newData)
+
+displayproduct(newData)
   }
-  // else if(sort=="Highest Price"){
 
-  // }
+  else if(e.target.value=="Highest Price"){
+
+    let newData=sorting_arr.sort(function(a,b){
+ return +b.price - +a.price
+
+
+}) 
+displayproduct(newData)
+  }
+
 })
+
+
 
 
   </script>
