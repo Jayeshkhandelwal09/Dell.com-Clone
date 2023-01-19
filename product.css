@@ -1,0 +1,76 @@
+.page{
+    display:flex;
+    margin:30px;
+}
+.filter_div{
+    width:15%;
+}
+.card{
+    display: flex;
+    border:1px solid red;
+    margin:30px;
+}
+.laptop_title{
+    margin-top:20px;
+    color: rgb(70, 70, 216);
+    font-weight: bolder;
+    font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif; ;
+
+}
+.blue{
+    color:blue;
+}
+.bold{
+    font-weight: bolder;
+}
+.bolder{
+    font-weight: bolder;
+    font-size:30px;
+}
+.card_right{
+    margin:30px;
+}
+
+.left{
+    font-family: 'Playfair Display', serif; ;
+}
+
+.card>div{
+    margin:20px;
+  
+}
+.opaque{
+    background-color: beige;
+    padding:7px;
+}
+
+.green{
+    color:rgb(161, 203, 98)
+}
+
+.bt{
+    padding:10px 20px 10px 20px;
+    background-color: rgb(28, 136, 195);
+    border-radius:30px;;
+   border:none;
+   color:white;
+   font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+}
+
+.buttons{
+    margin:50px;
+}
+
+.sort{
+    text-align: end;
+    margin:50px 50px 10px;
+}
+#sorting{
+    /* border:none; */
+padding:15px;
+border-radius: 10px;;
+}
