@@ -8,19 +8,152 @@
 
 <style>
     .main{
+        width: 100%;
         display: flex;
         justify-content: space-around;
         margin: auto;
     }
-    #signup{
-    text-align: center;
+
+    
+    .head{
+        font-size: 20px !important;
+        line-height: 48px !important;
+        font-weight: 150 !important;
+        color:#0e0e0e;
+        text-align: center;
+    }
+    .formcontainer{
+        /* margin-left: 325px; */
+        margin: auto;
+    }
+    #first{
+        font-size: 16px;
+        margin: auto;
+        line-height: 24px;
+        text-decoration: none solid rgb(34,34,3
+        );
+        word-spacing: 0px;
+        height: 50px;
+        width: 400px;
+        padding: 0 15px 0 15px;
+        min-height: auto;
+        display: flex;
+        box-sizing: border-box;
+       
+    }
+    #last{
+        font-size: 16px;
+        margin: auto;
+        line-height: 24px;
+        text-decoration: none solid rgb(34,34,3
+        );
+        word-spacing: 0px;
+        height: 50px;
+        width: 400px;
+        padding: 0 15px 0 15px;
+        min-height: auto;
+        display: flex;
+        box-sizing: border-box;
+       
+    }
+    #email{
+        font-size: 16px;
+        margin: auto;
+        line-height: 24px;
+        text-decoration: none solid rgb(34,34,3
+        );
+        word-spacing: 0px;
+        height: 50px;
+        width: 400px;
+        padding: 0 15px 0 15px;
+        min-height: auto;
+        display: flex;
+        box-sizing: border-box;
+       
+    }
+    #password{
+        font-size: 16px;
+        margin: auto;
+        line-height: 24px;
+        text-decoration: none solid rgb(34,34,3
+        );
+        word-spacing: 0px;
+        height: 50px;
+        width: 400px;
+        padding: 0 15px 0 15px;
+        min-height: auto;
+        display: flex;
+        box-sizing: border-box;
+       
     }
     .inf{
-       text-align: justify; 
+     font-size: 13px;
     }
-
-    #benefits{
+#end{
+    /* margin-left: 325px; */
+}
+#createaccount{
+    font-size: 16px;
+    margin:auto;
+        line-height: 24px;
+        text-decoration: none solid rgb(34,34,3
+        );
+        word-spacing: 0px;
+        height: 50px;
+        width: 400px;
+        padding: 0 15px 0 15px;
+        min-height: auto;
+        display: flex;
+        box-sizing:border-box;
+        background-color: #0063B8;
+        color: white;
+       
+}
+#cancel{
+    font-size: 16px;
+    margin: auto;
+        line-height: 24px;
+        text-decoration: none solid rgb(34,34,3
+        );
+        word-spacing: 0px;
+        height: 50px;
+        width: 400px;
+        padding: 0 15px 0 15px;
+        min-height: auto;
+        display: flex;
+        box-sizing: border-box;
+       color: #0063B8;
+}
+    #benefits{width: 50%;
+        text-align: center;
+        font-size: 17px;
       margin: auto;
+      background-color:#F5F6F7;
+      padding: 30px;
+    }
+    #signup{
+        
+        width: 50%;
+        padding: 30px;
+    }
+    .formcontainer{
+        
+        margin: auto;
+    }
+    #form{
+    
+    }
+    #bene2{
+        display: flex;
+        text-align: center;
+    }
+    #img{
+        text-align: center;
+    }
+    .heading{
+        text-align: center;
+    font-size: 40px;
+    font-weight: 0; 
     }
 </style>
 
@@ -29,21 +162,26 @@
 <body>
    
     <div class="main" >
+
+           <!-- signup form start here -->
+
 <div id="signup" >
-    <h1>Create Your Account</h1>
-<p>Alredy have an account? <a href="signin.html"></a> Sign In </p>
-
-
-<form action="">
+    <div  class="head">
+    <p class="heading">Create Your Account</p>
+ <label for="">Alredy have an account?</label>  <a href="signin.html">Sign In</a>  
+</div>
+<div class="formcontainer" >
+<form id="form">
     <input type="text" id="first" placeholder="First Name" >
+    <br>
     <input type="text" placeholder="Last Name" id="last">
-    <br><br>
+    <br>
     <input type="email" placeholder="Email Address" id="email" >
-        <br><br>
+        <br>
    <input type="password" placeholder="Password" id="password" />
      <br><br>
 </form>
- 
+</div>
 
 <div class="inf">
     
@@ -56,15 +194,18 @@
      
 </div>
 <div id="end" >
-  <input type="button" value="Create Account" id="create account">
+  <input type="button" value="Create Account" id="createaccount">
+  <br>
  <input type="button" value="Cancel" id="cancel">
 </div>
 
 </div>
 
 
+              <!-- Benefits section start here -->
+
 <div  id="benefits">
-    <h1>Dell Account Benefits</h1>
+    <p class="heading">Dell Account Benefits</p>
     <p>My Account is an easy, more centralized way to manage your tech.sign up now! </p>
      <div id="bene2" >
     <div id="order">
@@ -83,7 +224,7 @@
         <p>Save your favorite payment method and shipping details for quicker checkout</p>
     </div>
 </div>
-    <div>
+    <div id="img">
         <img src="https://i.dell.com/sites/csimages/Banner_Imagery/all/bannerimage460x460.png" alt="">
     </div>
 </div>
@@ -93,44 +234,9 @@
 
 
 </body>
+<script src="signup.js"></script>
 </html>
 
 
 
-<script>
 
-    var userDetails=JSON.parse(localStorage.getItem("userData")) || [];
-
-let acreate=document.querySelector("create account")
- acreate.addEventListener("click", createaccount);
-
-function createAccount(){
-
-     var fname=document.querySelector("first").value;
-     var lname=document.querySelector("last").value;
-    var email=document.querySelector("email").value;
-    var password=document.querySelector("password").value;
-
-    if(
-        fname=="" ||
-        lname=="" ||
-        email=="" ||
-        password==""
-        ){
-        alert("Please Enter valid Details For Create Account");
-    }else{
-        let obj={
-            
-            fname:fname,
-            lname:lname,
-            email:email,
-            password:password,
-        };
-        userDetails.push(obj);
-
-        localStorage.setItem("userData",JSON.stringify(userDetails));
-        alert("Account Created Succesfully!")
-    }
-}
-
-</script>
