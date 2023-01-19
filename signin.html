@@ -19,16 +19,18 @@ height: 45rem;
 width: 100%;
 
 }
-.head{
+* .head{
+    font-size: 20px !important;
+    line-height: 48px !important;
+    font-weight: 300 !important;
+    color: #0e0e0e;
     text-align: center;
 }
 #gs{
-    width: 100%;
-    justify-content: space-between;
-    text-align: center;
-    
+    display: flex;
+    flex-wrap: wrap;
 
-}
+} */
 #bene2{
     
     margin: auto;
@@ -53,7 +55,7 @@ width: 100%;
             </div>
               <hr>
               <div >
-                <form id="form" action="signup.html">
+                <form id="form" action="">
                 
                   <input type="email" placeholder="Email Address" id="email" >
                  <br><br>
@@ -72,8 +74,8 @@ width: 100%;
                   <a href="otp.html"></a>
                   <br>
                   <div class="end">
-                    Don't have a Dell account? Create an account
-                    <a href="signup.html">SIGN UP</a>
+                    Don't have a Dell account? <a href="signup.html" Create an account>SIGN UP</a>
+                    
                   </div>
                    
                 </form>
@@ -124,7 +126,7 @@ width: 100%;
 
 var userDetails=JSON.parse(localStorage.getItem("userData"))||[];
 var sign=document.querySelector("signin");
-sign.addEventListener("click",signin);
+sign.addEventListener("submit",signin);
 
 function signin(){
     var email=document.querySelector("email").value;
