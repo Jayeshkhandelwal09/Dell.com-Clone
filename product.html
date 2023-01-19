@@ -1,4 +1,6 @@
 <html>
+
+
   <head>
     <title>Product</title>
    <link rel="stylesheet" href="product.css">
@@ -86,69 +88,157 @@
               </div>
           </div>
 
-          <div class="storage_filter">
-            <h3>Storage Size</h3>
-              <div>
-                <input type="checkbox">
-                <span>1 TB</span>
-              </div>
-              <div>
-                <input type="checkbox">
-                <span>512 GB</span>
-              </div>
-          </div>
 
-          <div class="operatingsystem_filter">
-            <h3>Operating System</h3>
-              <div>
-                <input type="checkbox">
-                <span>Windows 11
-                </span>
-              </div>
-          </div>
+<head>
+  <title>Product</title>
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-          <div class="features_filter">
-            <h3>Features</h3>
-              <div>
-                <input type="checkbox">
-                <span>Lightweight</span>
-              </div>
-              
-              </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
+</head>
 
-
+<body>
+  <div class="sort">
+    <span>Sort By</span>
+    <select name="" id="sorting">
+      <option value="Relevance">Relevance</option>
+      <option value="Lowest Price">Lowest Price</option>
+      <option value="Highest Price">Highest Price</option>
+    </select>
   </div>
-  <div id="product"></div>
- </div>
-<script>
-  let product= document.getElementById("product")
-let url = "1.json"
+  <div class="page">
+    <div class="filter_div">
+      <h1>Filter Result</h1>
 
-let sorting_arr=[]
+      <div class="screen_filter">
+        <h3>Screen Size</h3>
+
+        <div>
+          <input type="checkbox">
+          <span>43.18CM (17 inch)</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>38.10CM (15 inch)</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>35.56CM (14 inch)</span>
+        </div>
+      </div>
+
+      <div class="processor_filter">
+        <h3>Processor</h3>
+
+        <div>
+          <input type="checkbox">
+          <span>All Intel Processors</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Intel Core i9 K Series</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Intel Core i9</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>Intel Core i7</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>All AMD Processors</span>
+        </div>
+
+      </div>
+      <div class="price_filter">
+        <h3>Price</h3>
+        <div>
+          <input type="checkbox">
+          <span>₹80,000</span>
+        </div>
+      </div>
+      <div class="memory_filter">
+        <h3>Memory (RAM)</h3>
+        <div>
+          <input type="checkbox">
+          <span>32GB</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>16GB</span>
+        </div>
+      </div>
+
+      <div class="storage_filter">
+        <h3>Storage Size</h3>
+        <div>
+          <input type="checkbox">
+          <span>1 TB</span>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>512 GB</span>
+        </div>
+      </div>
+
+      <div class="operatingsystem_filter">
+        <h3>Operating System</h3>
+        <div>
+          <input type="checkbox">
+          <span>Windows 11
+          </span>
+        </div>
+      </div>
+
+      <div class="features_filter">
+        <h3>Features</h3>
+        <div>
+          <input type="checkbox">
+          <span>Lightweight</span>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    <div id="product"></div>
+  </div>
+  <script>
+    let product = document.getElementById("product")
+    let url = "1.json"
+
+    let sorting_arr = []
 
 
 
 
-  fetch(url)
-  .then((res)=>{
-    return res.json()
-  })
-  .then((data)=>{
-    console.log(data.laptops)
-    sorting_arr=data.laptops
-    displayproduct(data.laptops)
-   
-    console.log(data.laptops)
-  })
+    fetch(url)
+      .then((res) => {
+        return res.json()
+      })
+      .then((data) => {
+        console.log(data.laptops)
+        sorting_arr = data.laptops
+        displayproduct(data.laptops)
 
-  function displayproduct(data){
+        console.log(data.laptops)
+      })
+
+    function displayproduct(data) {
 
 
 
-    let cardList=`
+      let cardList = `
     
       <div class="card-list">
+
       ${
         data.map((elem)=>
 
@@ -158,10 +248,11 @@ let sorting_arr=[]
         ).join("")
       }
 
+
       </div>
     `
 
-      document.querySelector("#product").innerHTML=cardList
+      document.querySelector("#product").innerHTML = cardList
     }
 
     // data.map((element) => {
@@ -194,7 +285,7 @@ let sorting_arr=[]
         
         
 
-        let card=`
+      let card = `
         <div class="card">
 
                                                     <div class="pic">
@@ -257,10 +348,11 @@ let sorting_arr=[]
 
 
         `
-        return card
+      return card
 
 
-        }
+
+    }
 
 
 
@@ -279,13 +371,17 @@ let sorting_arr=[]
 //----------------------------------- sorting-----------------------------------
 
 
-document.querySelector("#sorting").addEventListener("change",(e)=>{
-  let sort=e.target.value
 
-  if(e.target.value=="Relevance"){
-    displayproduct(sorting_arr)
+    // sorting
 
-    }
+    document.querySelector("#sorting").addEventListener("change", (e) => {
+      let sort = e.target.value
+
+
+      if (e.target.value == "Relevance") {
+        displayproduct(sorting_arr)
+
+      }
   else if(e.target.value=="Lowest Price"){
      let newData=sorting_arr.sort(function(a,b){
 
@@ -312,6 +408,8 @@ displayproduct(newData)
 
 
 
+
   </script>
-  </body>
+</body>
+
 </html>
