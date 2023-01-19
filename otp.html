@@ -12,23 +12,25 @@
 
 <body>
     
-
+  <!-- <input type="submit" value ="Send One-time Password"  id="otp">
+  <a href="otp.html"></a>
+  <br> -->
 
 </body>
-</html>
-
 <script>
-   let otp = document.querySelector("otp");
+  let otp = document.querySelector("otp");
 
 let btn = document.querySelector("otp");
 btn.addEventListener("click", validate);
 
 function validate() {
-  if (otp.value == "123456") {
-    alert("Hurray!...Otp confirmed Succesfully");
+ if (otp.value == "123456") {
+   alert("Hurray!...Otp confirmed Succesfully");
 
-  } else {
-    alert("Wrong OTP");
-  }
+ } else {
+   alert("Wrong OTP");
+ }
 } 
 </script>
+</html>
+
