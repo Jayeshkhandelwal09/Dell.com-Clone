@@ -53,7 +53,7 @@ width: 100%;
             </div>
               <hr>
               <div >
-                <form id="form" action="signup.html">
+                <form id="form">
                 
                   <input type="email" placeholder="Email Address" id="email" >
                  <br><br>
@@ -118,26 +118,10 @@ width: 100%;
 
 
 </body>
+<script src="signin.js"></script>
 </html>
 
-<script>
 
-var userDetails=JSON.parse(localStorage.getItem("userData"))||[];
-var sign=document.querySelector("signin");
-sign.addEventListener("click",signin);
 
-function signin(){
-    var email=document.querySelector("email").value;
-    if(email==""){
-        alert("Please Enter a Valid Email Address");
 
-    }else{
-        let obj={email:email};
-        userDetails.push(obj);
-
-        localStorage.setItem("userData",JSON.stringify(userDetails));
-        alert("SignIn Successfull!")
-    }
-}
-    
-</script>
+<!-- action="signup.html" -->
