@@ -10,8 +10,9 @@
    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
   </head>
-  <body>
-    <div class="sort">
+ 
+  <body >
+    <div  class="sort">
       <span>Sort By</span>
       <select name="" id="sorting">
         <option value="Relevance">Relevance</option>
@@ -22,9 +23,67 @@
  <div class="page">
   <div class="filter_div">
           <h1 class="headd">Filter Result</h1>
+          <div class="price_filter">
+            <h3 >Price</h3>
+              <div>
+                <input type="checkbox" id="ch">
+                <span>₹80,000</span>
+              </div>
+          </div>
+
+
+
+          <div class="memory_filter">
+            <h3>Memory (RAM)</h3>
+              <div>
+                <input type="checkbox" id="gb8">
+                <span>8GB</span>
+              </div>
+              <div>
+                <input type="checkbox" id="gb16">
+                <span>16GB</span>
+              </div>
+          </div>
+
+          <div class="storage_filter">
+            <h3 class="h3Style">Storage Size</h3>
+            
+              <div>
+                <input type="checkbox" id="gb256">
+                <span>256 GB</span>
+              </div>
+              <div>
+                <input type="checkbox" id="gb512">
+                <span>512 GB</span>
+              </div>
+              <div>
+                <input type="checkbox" id="tb1">
+                <span>1 TB</span>
+              </div>
+          </div>
+
+          <div class="processor_filter">
+            <h3 >Processor</h3>
+
+            <div>
+              <input type="checkbox" id="i7">
+              <span>Intel Core i7</span>
+            </div>
+            <div>
+              <input type="checkbox" id="i9">
+              <span>Intel Core i9</span>
+            </div>
+            <div>
+              <input type="checkbox" id="amd">
+              <span>All AMD Processors</span>
+            </div>
+
+     </div>
 
           <div class="screen_filter">
                   <h3>Screen Size</h3>
+                  
+
 
                   <div>
                     <input type="checkbox">
@@ -40,64 +99,15 @@
                   </div>
            </div>
 
-          <div class="processor_filter">
-                  <h3>Processor</h3>
 
-                  <div>
-                    <input type="checkbox">
-                    <span>All Intel Processors</span>
-                  </div>
-                  <div>
-                    <input type="checkbox">
-                    <span>Intel Core i9 K Series</span>
-                  </div>
-                  <div>
-                    <input type="checkbox">
-                    <span>Intel Core i9</span>
-                  </div>
-                  <div>
-                    <input type="checkbox">
-                    <span>Intel Core i7</span>
-                  </div>
-                  <div>
-                    <input type="checkbox">
-                    <span>All AMD Processors</span>
-                  </div>
+          
+         
+          
 
-           </div>
-          <div class="price_filter">
-            <h3>Price</h3>
-              <div>
-                <input type="checkbox">
-                <span>₹80,000</span>
-              </div>
-          </div>
-          <div class="memory_filter">
-            <h3>Memory (RAM)</h3>
-              <div>
-                <input type="checkbox">
-                <span>32GB</span>
-              </div>
-              <div>
-                <input type="checkbox">
-                <span>16GB</span>
-              </div>
-          </div>
-
-          <div class="storage_filter">
-            <h3>Storage Size</h3>
-              <div>
-                <input type="checkbox">
-                <span>1 TB</span>
-              </div>
-              <div>
-                <input type="checkbox">
-                <span>512 GB</span>
-              </div>
-          </div>
-
+          
           <div class="operatingsystem_filter">
-            <h3>Operating System</h3>
+            <h3 >Operating System</h3>
+
               <div>
                 <input type="checkbox">
                 <span>Windows 11
@@ -137,9 +147,6 @@ let array=[]
     sorting_arr=data.laptops
     array=data.laptops
     displayproduct(data.laptops)
-
-    console.log(data.laptops)
-
   })
 
   function displayproduct(data){
@@ -256,6 +263,7 @@ let array=[]
         return card
 
 
+
         }
 
 
@@ -271,6 +279,15 @@ let cart_arr=JSON.parse(localStorage.getItem("cart"))||[]
             // ---checking in cart-------
 
 
+
+        }
+
+
+let cart_arr=[]
+
+
+        // --------------cart-------------------
+            
                 for(let j=0;j<=cart_arr.length-1;j++){
                   if(cart_arr[j].id==array[i].id){
                     isalready=true
@@ -279,6 +296,8 @@ let cart_arr=JSON.parse(localStorage.getItem("cart"))||[]
                   }
                 }
 
+                  console.log(cart_arr)
+                // alert("hi")
 
                   if(isalready==true){
                     alert("product already in cart")
@@ -293,6 +312,11 @@ let cart_arr=JSON.parse(localStorage.getItem("cart"))||[]
                 // -----------------------------------
                  
 
+document.querySelector("#sorting").addEventListener("change",(e)=>{
+  let sort=e.target.value
+
+  if(e.target.value=="Relevance"){
+    displayproduct(sorting_arr)
 
 
         }
@@ -304,6 +328,7 @@ document.querySelector("#sorting").addEventListener("change",(e)=>{
 
   if(e.target.value=="Relevance"){
     displayproduct(sorting_arr)
+
 
     }
   else if(e.target.value=="Lowest Price"){
@@ -325,6 +350,139 @@ displayproduct(newData)
 }) 
 displayproduct(newData)
   }
+
+})
+
+// Alok's Code start from here only
+
+// This is Price filter part
+
+
+let ch = document.getElementById("ch")
+
+ch.addEventListener("click",()=>{
+  let filterArrData= sorting_arr.filter((item)=>{
+    if(item.price < 80000){
+      return item
+    }
+  })
+  displayproduct(filterArrData)
+
+})
+
+// This Is 8GB Memory Filter Part
+
+let gb8 =document.getElementById("gb8")
+
+gb8.addEventListener("click",()=>{
+  let filter8Gb = sorting_arr.filter((item)=>{
+    if(item.ram2 == "8"){
+      return item
+    }
+  })
+  displayproduct(filter8Gb)
+})
+// This Is 16GB Memory Filter Part
+
+let gb16 =document.getElementById("gb16")
+
+gb16.addEventListener("click",()=>{
+  let filter8Gb = sorting_arr.filter((item)=>{
+    if(item.ram2 == "16"){
+      return item
+    }
+  })
+  displayproduct(filter8Gb)
+})
+
+
+// amd filter
+
+let amd = document.getElementById("amd")
+
+amd.addEventListener("click",()=>{
+  let filterAmd = sorting_arr.filter((item)=>{
+    if(item.processor2=="AMD"){
+      return item
+    }
+  })
+  displayproduct(filterAmd)
+})
+
+
+
+
+
+// storage filter
+
+
+let gb256 =document.getElementById("gb256")
+
+gb256.addEventListener("click",()=>{
+  let gb256Filter = sorting_arr.filter((item)=>{
+    if(item.storage2 == 256){
+      return item
+    }
+  })
+
+  displayproduct(gb256Filter)
+})
+
+
+
+let gb512 =document.getElementById("gb512")
+
+gb512.addEventListener("click",()=>{
+  let gb512Filter = sorting_arr.filter((item)=>{
+    if(item.storage2 == 512){
+      return item
+    }
+  })
+
+  displayproduct(gb512Filter)
+})
+
+
+
+let tb1 =document.getElementById("tb1")
+
+tb1.addEventListener("click",()=>{
+  let tb1Filter = sorting_arr.filter((item)=>{
+    if(item.storage2 == "1TB"){
+      return item
+    }
+  })
+
+  displayproduct(tb1Filter)
+})
+
+
+// processor filter
+
+let i7 = document.getElementById("i7")
+
+i7.addEventListener("click",()=>{
+  let i7Filter = sorting_arr.filter((item)=>{
+    if(item.processor2 == "Intel Core i7"){
+      return item
+    }
+  })
+
+  displayproduct(i7Filter)
+
+})
+
+
+let i9 = document.getElementById("i9")
+
+i9.addEventListener("click",()=>{
+  let i9Filter = sorting_arr.filter((item)=>{
+    if(item.processor2 == "Intel Core i9"){
+      return item
+    }
+  })
+
+  displayproduct(i9Filter)
 
 })
 

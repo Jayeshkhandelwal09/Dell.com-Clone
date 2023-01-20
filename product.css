@@ -1,3 +1,4 @@
+
 .page{
     display:flex;
     margin:30px;
@@ -17,7 +18,9 @@
     color: rgb(70, 70, 216);
     font-weight: bolder;
     font-size: 20px;
+
   font-family: 'Open Sans', sans-serif;
+
     font-family: 'Playfair Display', serif; ;
 
 }
@@ -164,4 +167,7 @@ border-radius: 10px;;
 .card_right{
     width:40%;
     /* border:1px solid blue; */
+
 }
+
+
