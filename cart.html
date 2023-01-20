@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+
+
+
+    </div>
+</body>
+</html>
+
+
+<script>
+    let cart_data=JSON.parse(localStorage.getItem("cart"))||[]
+
+
+console.log(cart_data)
+display_list(cart_data)
+
+    function display_list(cart_data){
+        document.querySelector(".container").innerHTML=""
+        let card_list=
+        `
+        
+            <div class="cardList">  
+                ${
+                    cart_data.map((elem,i)=>
+
+                        creating_card(elem,i)
+                    )
+                
+                }
+            </div>
+        `
+        document.querySelector(".container").innerHTML=card_list
+        }
+
+            function creating_card(elem,i){
+                let card=`
+               
+
+                <div class="outer">
+                     
+                <div class="image">
+                    <img src="${elem.image}"/>
+                </div>
+
+               <div class="card_body">
+                <div class="name">
+                    <p>${elem.name}</p>
+                </div>
+
+                <div class="memory">
+                <p>${elem.Memory}</p>
+                </div>
+
+                <div class="os">
+                    <p> ${elem.OS}</p>
+                </div>
+
+                <div class="storage">
+                    <p> ${elem.Storage}</p>
+                </div>
+
+                <div class="price">
+                    <p> ₹ ${elem.price}</p>
+                    </div>
+
+                </div>
+                    </div>
+
+                    <div class="rem">
+                        <button class="remove" onclick="delete_functionality(${i})"> Delete
+                            </button>
+                    </div>
+                `
+
+                return card
+            }
+
+ 
+function delete_functionality(i){
+    cart_data.splice(i,1)
+    console.log(cart_data)
+    // creating_card(cart_data)
+    display_list(cart_data)
+    localStorage.setItem("cart",JSON.stringify(cart_data))
+}
+
+
+</script>

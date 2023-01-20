@@ -31,6 +31,8 @@
               </div>
           </div>
 
+
+
           <div class="memory_filter">
             <h3>Memory (RAM)</h3>
               <div>
@@ -82,6 +84,7 @@
                   <h3>Screen Size</h3>
                   
 
+
                   <div>
                     <input type="checkbox">
                     <span>43.18CM (17 inch)</span>
@@ -96,6 +99,7 @@
                   </div>
            </div>
 
+
           
          
           
@@ -103,6 +107,7 @@
           
           <div class="operatingsystem_filter">
             <h3 >Operating System</h3>
+
               <div>
                 <input type="checkbox">
                 <span>Windows 11
@@ -142,9 +147,6 @@ let array=[]
     sorting_arr=data.laptops
     array=data.laptops
     displayproduct(data.laptops)
-
-    // console.log(data.laptops)
-
   })
 
   function displayproduct(data){
@@ -261,6 +263,23 @@ let array=[]
         return card
 
 
+
+        }
+
+
+let cart_arr=JSON.parse(localStorage.getItem("cart"))||[]
+
+
+        // --------------cart-------------------
+                function addtocart(i){
+                 let isalready=false
+                // console.log(array[i])
+
+
+            // ---checking in cart-------
+
+
+
         }
 
 
@@ -268,16 +287,37 @@ let cart_arr=[]
 
 
         // --------------cart-------------------
-                function addtocart(i){
-                 
-                // console.log(array[i])
-
-                  cart_arr.push(array[i])
-                // arr.push(elem)
-
+            
+                for(let j=0;j<=cart_arr.length-1;j++){
+                  if(cart_arr[j].id==array[i].id){
+                    isalready=true
+                    
+                    break
+                  }
+                }
 
                   console.log(cart_arr)
                 // alert("hi")
+
+                  if(isalready==true){
+                    alert("product already in cart")
+                  }
+
+                  else{
+                    alert("added to cart")
+                    cart_arr.push(array[i])
+                    localStorage.setItem("cart",JSON.stringify(cart_arr))
+                  }
+                
+                // -----------------------------------
+                 
+
+document.querySelector("#sorting").addEventListener("change",(e)=>{
+  let sort=e.target.value
+
+  if(e.target.value=="Relevance"){
+    displayproduct(sorting_arr)
+
 
         }
 
@@ -288,6 +328,7 @@ document.querySelector("#sorting").addEventListener("change",(e)=>{
 
   if(e.target.value=="Relevance"){
     displayproduct(sorting_arr)
+
 
     }
   else if(e.target.value=="Lowest Price"){
@@ -315,6 +356,7 @@ displayproduct(newData)
 // Alok's Code start from here only
 
 // This is Price filter part
+
 
 let ch = document.getElementById("ch")
 
@@ -443,6 +485,7 @@ i9.addEventListener("click",()=>{
   displayproduct(i9Filter)
 
 })
+
 
 
   </script>
