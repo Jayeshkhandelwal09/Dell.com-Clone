@@ -8,12 +8,12 @@
         "rating": "★★★★ 4.2 (2744)",
         "specs" : "specs",
         "Customise": "Customise",
-        "Processor" : "12th Gen Intel® Core™ i5-1235U",
+        "Processor" : "12th Gen Intel® Core™ i7-1235U",
 
         "OS" : "Windows 11 Home Single",
 
         "Graphics" : "Intel® Iris® Xe Graphics",
-        "Memory":"8 GB, 2 x 4 GB, DDR4, 3200 MHz",
+        "Memory":"16 GB, 2 x 4 GB, DDR4, 3200 MHz",
         "Storage":"512 GB, M.2, PCIe NVMe, SSD",
         "Display":"35.5-cm. touch display Full HD (1920X1200)",
         "useless":"₹2500 discount on CreditCard/UPI/NB",
@@ -26,7 +26,10 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"EMI starts from ₹ 6,624.00 /month"
+        "Emi":"EMI starts from ₹ 6,624.00 /month",
+        "ram2":"16",
+        "processor2":"Intel Core i7",
+        "storage2":"512"
         },
         {
         "id": 2,
@@ -52,7 +55,10 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"EMI starts from ₹ 6,791.00 /month"
+        "Emi":"EMI starts from ₹ 6,791.00 /month",
+        "ram2":"8",
+        "processor2":"AMD",
+        "storage2":"512"
         },
         {
         "id": 3,
@@ -62,11 +68,11 @@
         "rating": "★★★★ 4.0 (2033)",
         "specs" : "specs",
         "Customise": "Customise",
-        "Processor" : "12th Generation Intel® Core™ i5-1235U",
+        "Processor" : "12th Generation Intel® Core™ i7-1235U",
         "OS" : "Windows 11 Home Single Language",
         "Graphics" : "Intel® Iris® Xe Graphics",
         "Memory":"16 GB, 2 x 8 GB, DDR4, 3200 MHz",
-        "Storage":"512 GB, M.2, PCIe NVMe, SSD",
+        "Storage":"1TB, M.2, PCIe NVMe, SSD",
         "Display":"35.5-cm. display Full HD (1920X1200)",
         "useless":"Prices Slashed!! Hurry Now",
         "online":"Online Price ₹ 79,990.00",
@@ -78,7 +84,11 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"EMI starts from ₹ 6,624.00 /month"
+        "Emi":"EMI starts from ₹ 6,624.00 /month",
+        "ram2":"16",
+        "processor2":" Intel Core i7",
+        "storage2":"1TB"
+        
         },
         {
         "id": 4,
@@ -91,7 +101,7 @@
         "Processor" : "12th Gen Intel® Core™ i7-1255U",
         "OS" : "Windows 11 Home Single Language",
         "Graphics" : "Intel® Iris® Xe Graphics",
-        "Memory":"16 GB, 2 x 8 GB, DDR4, 3200 MHz",
+        "Memory":"8 GB, 2 x 8 GB, DDR4, 3200 MHz",
         "Storage":"512 GB, M.2, PCIe NVMe, SSD",
         "Display":"35.5-cm. touch display Full HD (1920X1200)",
         "useless":"Prices Slashed!! Hurry Now",
@@ -104,7 +114,10 @@
         "special":"Special Offers ",
         "view":"View All (3)",
         "finance":"Financing",
-        "Emi":"No cost EMI available . See options at checkout"
+        "Emi":"No cost EMI available . See options at checkout",
+        "ram2":"8",
+        "processor2":" Intel Core i7",
+        "storage2":"512"
         },
         {
         "id": 5,
@@ -114,7 +127,7 @@
         "rating": "★★★★ 4.2 (3759)",
         "specs" : "specs",
         "Customise": "Customise",
-        "Processor" : "12th Generation Intel® Core™ i5-1235U",
+        "Processor" : "12th Generation Intel® Core™ i9-1235U",
         "OS" : "Windows 11 Home Single Language",
         "Graphics" : "Intel® Iris® Xe Graphics",
         "Memory":"16 GB, 2 x 8 GB, DDR4, 3200 MHz",
@@ -130,7 +143,10 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"EMI starts from ₹ 6,624.00 /month"
+        "Emi":"EMI starts from ₹ 6,624.00 /month",
+        "ram2":"16",
+        "processor2":"Intel Core i9",
+        "storage2":"512"
         },
         {
         "id": 6,
@@ -140,11 +156,11 @@
         "rating": "★★★★ 4.2 (3759)",
         "specs" : "specs",
         "Customise": "Customise",
-        "Processor" : "12th Gen Intel® Core™ i7-1255U",
+        "Processor" : "AMD Ryzen™ 5 5625U 7-core Graphics",
         "OS" : "Windows 11 Home Single Language",
         "Graphics" : "NVIDIA® GeForce® MX570/570A, 2 GB GDDR6",
         "Memory":"16 GB, 2 x 8 GB, DDR4, 3200 MHz",
-        "Storage":"512 GB, M.2, PCIe NVMe, SSD",
+        "Storage":"256 GB, M.2, PCIe NVMe, SSD",
         "Display":"40.6-cm. display Full HD (1920X1200)",
         "useless":"₹5,000 Instant discount on UPI",
         "online":"Online Price ₹ 1,12,489.99",
@@ -156,7 +172,10 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"No cost EMI available . See options at checkout."
+        "Emi":"No cost EMI available . See options at checkout.",
+        "ram2":"16",
+        "processor2":"AMD",
+        "storage2":"256"
         },
         {
         "id": 7,
@@ -169,8 +188,8 @@
         "Processor" : "AMD Ryzen™ 5 5625U 6-core/12-thread Processor with Radeon™ Graphics",
         "OS" : "Windows 11 Home Single Language",
         "Graphics" : "AMD Radeon™ Graphics with shared graphics memory",
-        "Memory":"8 GB, 1 x 8 GB, DDR4, 3200 MHz        ",
-        "Storage":"512 GB, M.2, PCIe NVMe, SSD",
+        "Memory":"16 GB, 1 x 8 GB, DDR4, 3200 MHz        ",
+        "Storage":"1TB, M.2, PCIe NVMe, SSD",
         "Display":"39.6-cm. display Full HD (1920X1080)",
         "useless":"₹1000 discount on CreditCard/UPI/NB",
         "online":"Online Price ₹ 58,490.00",
@@ -183,7 +202,10 @@
         "special":"Special Offers ",
         "view":"View All (3)",
         "finance":"Financing",
-        "Emi":"EMI starts from ₹ 4,582.00 /month"
+        "Emi":"EMI starts from ₹ 4,582.00 /month",
+        "ram2":"16",
+        "processor2":"AMD",
+        "storage2":"1TB"
         },
         {
         "id": 8,
@@ -209,7 +231,10 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"No cost EMI available . See options at checkout."
+        "Emi":"No cost EMI available . See options at checkout.",
+        "ram2":"8",
+        "processor2":"AMD",
+        "storage2":"512"
         },
         {
         "id": 9,
@@ -235,7 +260,10 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"No cost EMI available . See options at checkout."
+        "Emi":"No cost EMI available . See options at checkout.",
+        "ram2":"16",
+        "processor2":"Intel Core i7",
+        "storage2":"512"
         },
         {
         "id": 10,
@@ -245,11 +273,11 @@
         "rating": "★★★★ 4.0 (1736)",
         "specs" : "specs",
         "Customise": "Customise",
-        "Processor" : "12th Gen Intel® Core™ i3-1215U",
+        "Processor" : "12th Gen Intel® Core™ i7-1215U",
         "OS" : "Windows 11 Home Single Language",
         "Graphics" : "Intel® UHD Graphics",
         "Memory":"8 GB, 1 x 8 GB, DDR4, 2666 MHz",
-        "Storage":"512 GB, M.2, PCIe NVMe, SSD",
+        "Storage":"1TB, M.2, PCIe NVMe, SSD",
         "Display":"39.6-cm. display Full HD (1920X1080)",
         "useless":"₹500 discount on CreditCard/UPI/NB",
         "online":"Online Price ₹ 55,990.03",
@@ -261,7 +289,10 @@
         "special":"Special Offers ",
         "view":"View All (4)",
         "finance":"Financing",
-        "Emi":"EMI starts from ₹ 4,166.00 /month"
+        "Emi":"EMI starts from ₹ 4,166.00 /month",
+        "ram2":"8",
+        "processor2":" Intel Core i7",
+        "storage2":"1TB"
         }
     ]
 }
