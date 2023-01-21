@@ -28,11 +28,18 @@ width: 50%;
 .head{
     text-align: center;
     font-size: 40px;
-    font-weight: 0;
+    
+    
+}
+.head p{
+    font-family: Roboto, sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: normal;
 }
 #gs{
     width: 300px;
-    height: 100px;
+    height: 1x;
     display: flex;
     text-align: center;
 }
@@ -72,7 +79,7 @@ width: 100%;
 }
 #signin{
     font-size: 16px;
-    text-align: center;
+    
         margin: auto;
         line-height: 24px;
         text-decoration: none solid rgb(34,34,3
@@ -86,15 +93,14 @@ width: 100%;
         box-sizing: border-box;
         background-color: #0063B8;
         color: white;
-       
+       padding-left: 30%;
 }
 #otp{
     font-size: 16px;
     text-align: center;
         margin: auto;
         line-height: 24px;
-        text-decoration: none solid rgb(34,34,3
-        );
+        border: 2px solid #0076ce;
         word-spacing: 0px;
         height: 50px;
         width: 500px;
@@ -103,6 +109,9 @@ width: 100%;
         display: flex;
         box-sizing: border-box;
        color: #0063B8;
+       background-color: white;
+       text-align: center;
+       padding-left: 20%;
 }
 #bene2{
     
@@ -117,12 +126,36 @@ width: 100%;
 }
 #or{
     font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
     text-align: center;
+    letter-spacing: normal;
+}
+#orsp{
+    color: #0063B8;
 }
 .heading{
     text-align: center;
     font-size: 40px;
     font-weight: 0; 
+    font-family: Roboto, sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: normal;
+}
+
+#crAc{
+    text-decoration: none;
+    color: #0063B8;
+    
+}
+.mac{
+    font-family:Roboto, sans-serif ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    
 }
     </style>
 </head>
@@ -134,17 +167,17 @@ width: 100%;
 
         
             <div class="head">
-              <P> sign In</P>
+              <P > Sign In</P>
            
             </div>
             <div id="gs">
                 
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAC6CAMAAABoQ1NAAAABJlBMVEX////qQzVChfQ0qFP7vAXy9/4re/P7ugA2gPSqw/nqPzD7uQDqQTOzy/nqPi/pNCMjpEjpMR7pOSk8gvQspk3+8/LrU0f73tutx/n97cf8y1Lg6v3x+fPb7+AYokL+9/b62db4yMTympTtZFnpKhTsXVLyk433v7vvfHTucGf2uLT1r6rrSjzzop3tamD5z8z86uj+8dLuaDfpNzX8z2P8xADzjDj++Of3pSn95Kn6tiLygjn/+/L2nSz4rRf7xjsZdPPD1/v82ov813z95raYt/iHrfd2pPfPuzFrnPWmukec0ar0vhd5tFhBrV7r8v65u0BQjfRbt3JrvoVNsWeMyps6oI/C4spLj+ZRnMhLo6RKq349q11QmNWu2rl4s8bN59OWzaSS+IC3AAADiklEQVR4nO3Y7XvSVhjHcdogwTRNQprSbkLAWksVUKvtnPOxOjddla0FxjYV7f//T0hKyVMJva6+OGfXyffz9uTFze+67/NAoQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6mhsNJvNjXXZZfwPNG5u3XK3K4Htyu2dVp4zadzcdSuuYS5NmYZrV+7cbcguS45Gu1qxZlHMmJbd6eaxRVpVO53FeSJ2567s4kRbv2Mbc8OYBnIvXw1y33YzwwhYlfuySxSovT1/TmINst2WXaQw3cplaSwZZlN2laJ0M/bQeBruhuwqRWml0zAt17Zt1zLNHKaxkZwU07U7u+1Wq9XeqdrudMkwcpNGoWMkwljain76g24nCMRYyk8aO/ET1rK2kheMRtewjE5+0kiMinu7efGDqpWfNAq7ViyNe/Nea+tN0TXJs6c/fBSmcUt2NdLt6wc/nedhVGUXI93jYrF48HNneqbkaIvI8GRlkkfxl2Bg7K7sYuTb14tnnj4yO/l6ws/zrHgex8Fzl+Yo7K0UZ148SC5dyySnVBGehHHoL1NLm69K8706lFKqCK/1MI43qaXV8vJ85U0ppYrwJoxj5dfUUnYcb6WUKsJ+FMcPqaXMONZ+k1KqCD9Gw7KXWsqO43cppYpAHAlXGhZ147jKVqrw3nGlg1bdk2XRNaxUjluL4rgupVQRHkdxvKsnl25cj9t8H+ZRXpVTqwCzJ5yu/+EdLfwyiqN0Q1BxEkyPFv3DR03r1RZ892ds81D9Dae/62ma5ixqj81wY1X4nJ3+Oaj/9VkLePXMz64d52EnndhfKX7Uprxe5ldvo1O3rPDWUSjsfehpM95JxkeHpegS9l5oecL1vTAOzTmZu50exm5kCh+zZ+pOFIfmDebsH6tRbywvH4uvUKxhIg/vNNUg9f7fx2u5aY6JXmxcJgOjDWMdMup7njP4ZzYta8o3R2pcgg5xtP54PBqNhwPH8c5a5t+S+jfS0CiVR5BIwAvbxv9vORiYkrr/GscdXcgjzf80GZiyuv90JB35l+Xhff5SUvl6njS+PA//q8Jvt7Rvjrc4Dn8ou0Shav1FgXjeWHaBoo16WYF4Tn/RnyGKqo0H/sVAJoduP/vpr7ZR3/Gj68ZkRhx/cJrXMAK10emJ5085g+E4z1mEavWJHO4XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANT1HUnjUiCXMma8AAAAAElFTkSuQmCC" alt="">
-                <p id="google" > <a href="">Google Sign In</a> </p>
+                
+                <!-- <p id="google" > <a href="">Google Sign In</a> </p> -->
                 <!-- <input type="text" name="Google Sign In" id="google"> -->
             </div>
 
-              <hr>
+              
               <div >
                 <form id="form">
 
@@ -155,10 +188,9 @@ width: 100%;
                   <input type="password" placeholder=" Enter Password" id="pass" />
                   <br><br>
      
-                  <p id="or" >Don't remember your password? Create or Reset password</p> 
-                  
+                  <p id="or" >Don't remember your password? <span id="orsp">Create or Reset password</span>  </p> 
 
-                  <input type="submit" id="signin" value="Sign In">
+                  <input type="submit" id="signin" value="Sign In ">
                   <br>
                   <p id="or" >or</p>
 
@@ -166,7 +198,7 @@ width: 100%;
                   <a href="otp.html"></a>
                   <br>
                   <div class="end">
-                   <p id="or" >Don't have a Dell account? <a href="signup.html">Create an account</a></p> 
+                   <p id="or" >Don't have a Dell account? <a href="signup.html" id="crAc">Create an account</a></p> 
                     
                   </div>
                    
@@ -179,22 +211,22 @@ width: 100%;
     <div class="benefits">
              
         <p class="heading">Dell Account Benefits</p>
-        <p>My Account is an easy, more centralized way to manage your tech.sign up now! </p>
+        <p class="mac">My Account is an easy, more centralized way to manage your tech.sign up now! </p>
          <div id="bene2" >
         <div id="order">
             <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-1-tracking-36x36.png" alt="">
-            <h6>Order Tracking</h6>
-            <p>Manage orders, track shipping status and view support history</p>
+            <p class="mac">Order Tracking</p>
+            <p class="mac">Manage orders, track shipping status and view support history</p>
         </div>
         <div id="commu">
             <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-2-mail-36x36.png" alt="">
-            <h6>Manage Communications</h6>
-            <p>Manage marketing and communications preferences</p>
+            <p class="mac">Manage Communications</p>
+            <p class="mac">Manage marketing and communications preferences</p>
         </div>
         <div id="profile">
             <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-3-profile-36x36.png" alt="">
-            <h6>Profile Setting</h6>
-            <p>Save your favorite payment method and shipping details for quicker checkout</p>
+            <p class="mac">Profile Setting</p>
+            <p class="mac">Save your favorite payment method and shipping details for quicker checkout</p>
         </div>
     </div>
         <div id="img">
@@ -212,7 +244,7 @@ width: 100%;
 
 
 </body>
-<script src="signin.js"></script>
+
 </html>
 
 

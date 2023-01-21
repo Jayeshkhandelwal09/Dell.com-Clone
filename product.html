@@ -24,7 +24,7 @@
     </nav>
     <!--  -->
     <div  class="sort">
-      <span>Sort By</span>
+      <span id="sb">Sort By</span>
       <select name="" id="sorting">
         <option value="Relevance">Relevance</option>
         <option value="Lowest Price">Lowest Price</option>
@@ -35,7 +35,7 @@
   <div class="filter_div">
           <h1 class="headd">Filter Result</h1>
           <div class="price_filter">
-            <h3 >Price</h3>
+            <h3 class="astyle" >Price</h3>
               <div>
                 <input type="checkbox" id="ch">
                 <span>₹80,000</span>
@@ -45,7 +45,7 @@
 
 
           <div class="memory_filter">
-            <h3>Memory (RAM)</h3>
+            <h3 class="astyle">Memory (RAM)</h3>
               <div>
                 <input type="checkbox" id="gb8">
                 <span>8GB</span>
@@ -57,7 +57,7 @@
           </div>
 
           <div class="storage_filter">
-            <h3 class="h3Style">Storage Size</h3>
+            <h3 class="h3Style astyle" >Storage Size</h3>
             
               <div>
                 <input type="checkbox" id="gb256">
@@ -74,7 +74,7 @@
           </div>
         
           <div class="processor_filter">
-            <h3 >Processor</h3>
+            <h3 class="astyle" >Processor</h3>
 
             <div>
               <input type="checkbox" id="i7">
@@ -92,7 +92,7 @@
      </div>
 
           <div class="screen_filter">
-                  <h3>Screen Size</h3>
+                  <h3 class="astyle">Screen Size</h3>
                   
 
 
@@ -117,7 +117,7 @@
 
           
           <div class="operatingsystem_filter">
-            <h3 >Operating System</h3>
+            <h3 class="astyle">Operating System</h3>
 
               <div>
                 <input type="checkbox">
@@ -127,7 +127,7 @@
           </div>
 
           <div class="features_filter">
-            <h3>Features</h3>
+            <h3 class="astyle">Features</h3>
               <div>
                 <input type="checkbox">
                 <span>Lightweight</span>
@@ -225,7 +225,7 @@ let array=[]
                                                       <div class="card_head">
                                                                 
                                                             <p class="laptop_title"> ${name}</p>
-                                                            <p > ${rating}</p>
+                                                            <p class="rat" > ${rating}</p>
                                                       </div>
                                                           <div class="speci">
                                                           <p class="bold"> ${specs}
@@ -234,13 +234,13 @@ let array=[]
                                                              
                                                            </p>
                                                           <hr>
-                                                                        <div>
+                                                                        <div class="prodiv">
                                                                         <span class="left r"> Processor </span> <span>       </span>     <span  class="lef"> ${processor} </span>
                                                                         </div>
-                                                                      <div>
+                                                                      <div class="osdiv">
                                                                          <span class="left r1"> OS </span>  <span class="lef">    ${os}    </span>
                                                                         </div>
-                                                                        <div>
+                                                                        <div class="gradiv">
                                                                           <span class="left r"> Graphics </span> <span  class="lef">    ${graphics}    </span>
                                                                           </div>
                                                                         <div>
@@ -291,7 +291,6 @@ let cart_arr=JSON.parse(localStorage.getItem("cart"))||[]
 
 
 
-                // }
 
         // --------------cart-------------------
             
@@ -315,10 +314,11 @@ let cart_arr=JSON.parse(localStorage.getItem("cart"))||[]
                     cart_arr.push(array[i])
                     localStorage.setItem("cart",JSON.stringify(cart_arr))
                   }
-                
+            
                 // -----------------------------------
-                 
+               
                 }
+
 
 
 //----------------------------------- sorting-----------------------------------

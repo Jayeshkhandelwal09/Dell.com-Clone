@@ -50,7 +50,7 @@
                 
                 <div class="menu-bar">
                     <ul>
-                        <li class="active"><a href="#" >
+                        <li class="active"><a href="#" id="khat" >
                             <img src="Laptops, PC, Desktop Computers & Monitors _ Dell India-5.svg" alt="" width="16px">Sign In <div class="arrow">^</div></a>
                             <div class="sub-menu-part1">
                                 <h5><a href="#">Welcome to Dell</a></h5>
@@ -374,6 +374,11 @@
 
 
 </body>
+<script>
+    let loginName=JSON.parse(localStorage.getItem("loginName")) || []
+    console.log(loginName)
 
+</script>
 
+<script src="signin.js"></script>
 </html>

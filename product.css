@@ -62,16 +62,33 @@
     font-weight: bolder;
     font-size: 20px;
 
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family:Roboto, sans-serif ;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: normal;
 
-    font-family: 'Playfair Display', serif; ;
+    
 
+}
+.rat{
+    font-family:Roboto, sans-serif ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
 }
 .blue{
     color:blue;
+    font-family:Roboto, sans-serif ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
 }
 .bold{
-    font-weight: bolder;
+    font-family:Roboto, sans-serif ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
 }
 .bolder{
     font-weight: bolder;
@@ -89,10 +106,8 @@
 }
 .lef{
     font-family: 'Barlow', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Work Sans', sans-serif;
+    /* color: red; */
+    
 }
 .card_right{
     line-height: 20px;
@@ -119,14 +134,17 @@ font-family: 'Work Sans', sans-serif;
 .bt{
     padding:10px 20px 10px 20px;
     background-color: rgb(28, 136, 195);
-    border-radius:30px;;
+    border-radius:15px;;
    border:none;
    color:white;
-   font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Playfair Display', serif;
+   font-family:Roboto, sans-serif ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
 }
-
+.bt:hover{
+    cursor: pointer;
+}
 .buttons{
     margin:50px;
 }
@@ -141,8 +159,30 @@ font-family: 'Playfair Display', serif;
 }
 #sorting{
     /* border:none; */
+
 padding:15px;
-border-radius: 10px;;
+border-radius: 6px;
+background-color: #0063B8;
+border: 2px solid #0063B8;
+color: white;
+font-family:Roboto, sans-serif ;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: normal;
+}
+.astyle{
+    font-family:Roboto, sans-serif ;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: normal;
+    font-weight: 690;
+    color: #0063B8;
+}
+
+#sorting option{
+    background-color: white;
+    color: black;
+    border-radius: 6px;
 }
 
 #product{
@@ -185,14 +225,12 @@ border-radius: 10px;;
     margin:5px;
 }
 
-.filter_div h3{
+/* .filter_div h3{
     color:rgb(67, 80, 172);
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Playfair Display', serif;
+
     font-weight: 690;
     font-size:20px;
-}
+} */
 /* --------specs spacing ---------*/
 
 .r{
@@ -212,5 +250,78 @@ border-radius: 10px;;
     /* border:1px solid blue; */
 
 }
+.prodiv{
+    
+    margin-bottom: 5%;
+}
+.osdiv{
+    
+    margin-bottom: 5%;
+}
+.gradiv{
+    margin-bottom: 5%;
+}
+#sb{
+    font-family:Roboto, sans-serif ;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: normal;
+}
 
+.filter_div span{
+    
+    font-family:Roboto, sans-serif ;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: normal;
+    
+}
+
+@media screen and (max-width:900px) and (min-width:601px){
+    .page{
+    
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:600px){
+    .card{
+        flex-direction: column;
+    }
+}
+/* @media screen and (max-width:900px){
+    .filter_div{
+        display: none;
+        
+    }
+} */
+@media screen and (max-width:900px){
+    .sort{
+        text-align: left;
+    }
+
+}
+
+/* responsiveness */
+@media screen and (max-width:900px) and (min-width:601px){
+    .page{
+    
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:600px){
+    .card{
+        flex-direction: column;
+    }
+}
+/* @media screen and (max-width:900px){
+    .filter_div{
+        display: none;
+        
+    }
+} */
+@media screen and (max-width:900px){
+    .sort{
+        text-align: left;
+    }
+}
 
