@@ -280,10 +280,10 @@ let cart_arr=JSON.parse(localStorage.getItem("cart"))||[]
 
 
 
-        }
+        
 
 
-let cart_arr=[]
+
 
 
         // --------------cart-------------------
@@ -310,17 +310,10 @@ let cart_arr=[]
                   }
                 
                 // -----------------------------------
-                 
-
-document.querySelector("#sorting").addEventListener("change",(e)=>{
-  let sort=e.target.value
-
-  if(e.target.value=="Relevance"){
-    displayproduct(sorting_arr)
+                }   
 
 
-        }
-
+      
 //----------------------------------- sorting-----------------------------------
 
 document.querySelector("#sorting").addEventListener("change",(e)=>{

@@ -171,3 +171,25 @@ border-radius: 10px;;
 }
 
 
+@media screen and (max-width:900px) and (min-width:601px){
+    .page{
+    
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:600px){
+    .card{
+        flex-direction: column;
+    }
+}
+/* @media screen and (max-width:900px){
+    .filter_div{
+        display: none;
+        
+    }
+} */
+@media screen and (max-width:900px){
+    .sort{
+        text-align: left;
+    }
+}
