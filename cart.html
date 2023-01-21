@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <style>
+       
+    </style>
 </head>
 <body>
     <div class="container">
@@ -17,82 +21,169 @@
 </html>
 
 
+
 <script>
     let cart_data=JSON.parse(localStorage.getItem("cart"))||[]
 
-
+ 
 console.log(cart_data)
 display_list(cart_data)
 
-    function display_list(cart_data){
-        document.querySelector(".container").innerHTML=""
-        let card_list=
-        `
-        
-            <div class="cardList">  
-                ${
-                    cart_data.map((elem,i)=>
 
-                        creating_card(elem,i)
-                    )
-                
-                }
-            </div>
-        `
-        document.querySelector(".container").innerHTML=card_list
-        }
 
-            function creating_card(elem,i){
-                let card=`
-               
+ function display_list(cart_data){
+     document.querySelector(".container").innerHTML=""
+     let card_list=
+     `
+     
+         <div class="cardList">  
+             ${
+                 cart_data.map((elem,i)=>
+                 
+                     creating_card(elem,i)
+                 )
+             
+             }
+         </div>
+     `
+     document.querySelector(".container").innerHTML=card_list
+     }
 
-                <div class="outer">
-                     
-                <div class="image">
-                    <img src="${elem.image}"/>
-                </div>
+         function creating_card(elem,i){
+             let card=`
 
-               <div class="card_body">
-                <div class="name">
-                    <p>${elem.name}</p>
-                </div>
+ <div id="container">
 
-                <div class="memory">
-                <p>${elem.Memory}</p>
-                </div>
-
-                <div class="os">
-                    <p> ${elem.OS}</p>
-                </div>
-
-                <div class="storage">
-                    <p> ${elem.Storage}</p>
-                </div>
-
-                <div class="price">
-                    <p> ₹ ${elem.price}</p>
-                    </div>
-
-                </div>
-                    </div>
-
-                    <div class="rem">
-                        <button class="remove" onclick="delete_functionality(${i})"> Delete
-                            </button>
-                    </div>
-                `
-
-                return card
-            }
-
+     <div id="cart-data">
+         <div id="data-name">
+             <p>Product Image</p> 
+             <p id="pro">Product name</p>
+             <p >Quantity</p>
+             <p>Price</p>
+         </div>
+         <hr>
+         <div id="four-div">
+             <div class="item-data">
+                 <div id="data-img">
+                     <img src="${elem.image}"/>
+                 </div>
+             </div>
+             
+             <div class="item-data">
+                 <h3>${elem.name}</h3>
+             </div>
  
+             <div class="item-data">
+                 <select name="" id="selecting" onchange="change_quantity(event,${i})">
+                     <option value="0">0</option>
+                     <option value="1" ${elem.quantity==1 ? 'selected':''}>1</option>
+                     <option value="2" ${elem.quantity==2 ? 'selected':''}>2</option>
+                     <option value="3" ${elem.quantity==3 ? 'selected':''}>3</option>
+                     <option value="4" ${elem.quantity==4 ? 'selected':''}>4</option>
+                   </select><br>
+                   <button class="remove" onclick="delete_functionality(${i})">Remove</button>
+             </div>
+ 
+             <div class="item-data">
+                 <p> ₹ ${elem.price * elem.quantity}</p>
+             </div>
+         </div>
+ 
+         <div id="below-cart">
+             <p>No Cost EMI available</p>
+             <p>This item is eligible for No Cost EMI. Proceed to checkout to see how much you will save.</p>
+         </div>
+         
+         <div id="item-total">
+             <p>Item total</p> 
+             <p> ₹ ${elem.price * elem.quantity}</p>
+         </div>
+ 
+     </div>
+ 
+ 
+     <div id="coupon-data">
+         <p id="coup">Coupon</p>
+         <input type="text" placeholder="Enter coupon" id="Discount">
+         <button id="cou" onclick="apply_coupon()">Apply Coupon</button>
+         <p id="agent"><span style="color:#006BBD";>Chat with an agent</span> or Call <span style="color:#006BBD";>1800-425-4002</span> for additional <br> help.</p>
+         <div style="border:1px solid #AAAAAA">
+         
+         <div class="numitem">
+             <p>Discounted Amount</p>
+             <p>${elem.discount}</p>
+         </div>
+ 
+         <div class="numitem">
+             <p style="font-weight:700"; color:#444444;>Total Order Value</p>
+             <p style="font-weight:700"; color:#444444; >₹ ${elem.price * elem.quantity - elem.discount}</p>
+             
+         </div>
+ 
+         <p id="above">Above prices include Tax and Shipping</p>
+ 
+         <button id="check" class="checkout-admin">Checkout</button><br>
+         <button id="conti">Continue Shipping</button>
+
+         <div id="spanP">
+             <p >Save cart</p><span>|</span><p>Email your cart</p>
+         </div>
+         
+         </div>
+ 
+     </div>
+ </div>    
+             `
+
+             return card
+         }
+
+
 function delete_functionality(i){
-    cart_data.splice(i,1)
-    console.log(cart_data)
-    // creating_card(cart_data)
-    display_list(cart_data)
-    localStorage.setItem("cart",JSON.stringify(cart_data))
+ cart_data.splice(i,1)
+ console.log(cart_data)
+ // creating_card(cart_data)
+ display_list(cart_data)
+ localStorage.setItem("cart",JSON.stringify(cart_data))
 }
+
+function change_quantity(e,i){
+ cart_data[i].quantity=Number(e.target.value)
+ display_list(cart_data)
+ localStorage.setItem("cart",JSON.stringify(cart_data))
+
+}
+
+function apply_coupon(){
+ let discount=document.querySelector("#Discount").value
+ cart_data.forEach((element)=>{
+     element.discount=parseInt(discount)
+ })
+ display_list(cart_data)
+ localStorage.setItem("cart",JSON.stringify(cart_data))
+
+}
+let admin_arr=[]
+let admin_data=document.querySelector(".checkout-admin")
+
+    admin_data.addEventListener("click",()=>{
+
+
+        // alert("hi")
+
+
+        admin_arr.push(cart_data)
+
+        localStorage.setItem("admins",JSON.stringify(admin_arr))
+
+
+    })
+
+
+
+
+
+
 
 
 </script>
