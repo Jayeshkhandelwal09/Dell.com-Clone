@@ -1,6 +1,9 @@
 let signinBtn=document.getElementById("signin")
 
 
+// khat.innerText="alok"
+let loginArr=[]
+
 signinBtn.addEventListener("click",()=>{
 
     let userData=JSON.parse(localStorage.getItem("userData")) || []
@@ -20,9 +23,16 @@ signinBtn.addEventListener("click",()=>{
 
     if(isVaild){
         alert(`${alName} You Are Logged In Now`)
+        loginArr.push(alName)
+      
+       
+        
 
     }else{
         alert(`Sorry Check Your Details Again`)
     }
 
+    // for(let i=0;i<loginArr.length;i++){
+    //     khat.innerText=loginArr[i]
+    // }
 })

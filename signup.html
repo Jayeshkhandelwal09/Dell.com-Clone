@@ -106,7 +106,8 @@
         box-sizing:border-box;
         background-color: #0063B8;
         color: white;
-        
+        padding-left: 20%;
+        border: 2px solid #0063B8;
        
 }
 #cancel{
@@ -123,6 +124,9 @@
         display: flex;
         box-sizing: border-box;
        color: #0063B8;
+       background-color: white;
+       border: 2px solid #0063B8;
+       padding-left: 25%;
     
 }
     #benefits{width: 50%;
@@ -150,10 +154,38 @@
         text-align: center;
     }
     .heading{
-        text-align: center;
-    font-size: 40px;
-    font-weight: 0; 
-    }
+        font-family: Roboto, sans-serif;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: normal;
+} 
+#ahnc{
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: normal;
+}
+
+#si{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: normal;
+    color: #0063B8;
+}
+.mac2{
+    font-family:Roboto, sans-serif ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    
+}
+    
 </style>
 
 
@@ -167,7 +199,7 @@
 <div id="signup" >
     <div  class="head">
     <p class="heading">Create Your Account</p>
- <label for="">Alredy have an account?</label>  <a href="signin.html">Sign In</a>  
+ <label for="" id="ahnc">Alredy have an account?</label>  <a href="signin.html" id="si">Sign In</a>  
 </div>
 <div class="formcontainer" >
 <form id="form">
@@ -184,12 +216,7 @@
 
 <div class="inf">
     
-    <p>Passwords must be between 8 and 20 characters in length and contain 1 upper case letter, 1 lower case letter, and 1 number.</p>
     
-     <p>Dell Technologies and its group of companies (“Dell”) would like to stay in touch and update you on products, services, solutions, exclusive offers, and special events. For more details about our information practices, see our Privacy Statement. You can unsubscribe at any time.</p>
-   
-    <h5>Yes, I would like Dell to send me email communications</h5>
-    <p>By clicking “Create Account”, you agree to our Terms & Conditions.</p>
      
 </div>
 <div id="end" >
@@ -205,22 +232,22 @@
 
 <div  id="benefits">
     <p class="heading">Dell Account Benefits</p>
-    <p>My Account is an easy, more centralized way to manage your tech.sign up now! </p>
+    <p class="mac2">My Account is an easy, more centralized way to manage your tech.sign up now! </p>
      <div id="bene2" >
     <div id="order">
         <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-1-tracking-36x36.png" alt="">
-        <h6>Order Tracking</h6>
-        <p>Manage orders, track shipping status and view support history</p>
+        <p class="mac2">Order Tracking</p>
+        <p class="mac2">Manage orders, track shipping status and view support history</p>
     </div>
     <div id="commu">
         <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-2-mail-36x36.png" alt="">
-        <h6>Manage Communications</h6>
-        <p>Manage marketing and communications preferences</p>
+        <p class="mac2">Manage Communications</p>
+        <p class="mac2">Manage marketing and communications preferences</p>
     </div>
     <div id="profile">
         <img src="https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/icon-3-profile-36x36.png" alt="">
-        <h6>Profile Setting</h6>
-        <p>Save your favorite payment method and shipping details for quicker checkout</p>
+        <p class="mac2">Profile Setting</p>
+        <p class="mac2">Save your favorite payment method and shipping details for quicker checkout</p>
     </div>
 </div>
     <div id="img">
