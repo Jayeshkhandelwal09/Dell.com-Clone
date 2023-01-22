@@ -10,6 +10,7 @@ body{
 
 .first{
     display: flex;
+   
 }
 
 .logo{
@@ -28,17 +29,30 @@ body{
     align-items: center;
     margin-left: 35px;
     padding-left: 20px;
+    display: flex;
 }
 
 #Search input{
     font-family: Arial, Helvetica, sans-serif;
     width: 450px;
-   margin-top: 19px;
+   margin-top: 3px;
    height: 30px;
    font-size: 15px;
    /* border-radius: 4px; */
    text-indent: 15px;
    margin-left: 20px;
+}
+
+#Search img{
+    margin-top: 8px;
+    height: 25px;
+    margin-right: 10px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#Search div{
+    margin-left: 10px;
 }
 
 .pages{
@@ -76,12 +90,34 @@ body{
     display: inline-flex;
     width: 10px;
     font-weight: bolder;
+   
+}
+.arrow:hover{
+    transform: rotate(180deg);
 }
 
 
 .menu-bar{
     margin-left: 20px;
+   
   
+  
+}
+
+
+#no-items{
+    
+    /* margin-left: 150px; */
+    margin-top: -100;
+    background-color: white;
+    color: black;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.sub-menu-part1 div{
+    margin-top: -20px;
+    margin-left: 30px;
 }
 
 .sub-menu-part1{
@@ -141,8 +177,12 @@ body{
    
    
     background-color: white;
+    box-shadow: 0 0 3px 3px grey;
 }
-
+.menu-bar ul li:hover .sub-menu-part1:nth-child(3){
+    box-shadow: 0;
+    width: 50px;
+}
 .menu-bar ul li:hover .sub-menu-part1 ul{
     display: block;
     margin: 10px;
@@ -153,7 +193,7 @@ body{
 .menu-bar ul{
     display: inline-flex;
     list-style: none;
-    color: #636363;
+    color: black;
     font-size: 15px;
 }
 
@@ -184,7 +224,8 @@ body{
     position: absolute;
     /* margin-top: 15px; */
    
-    background-color: black;
+    background-color: white;
+    box-shadow: 0 0px 3px 3px grey;
 }
 
 .menu-bar ul li:hover .sub-menu-1 ul{
@@ -196,6 +237,44 @@ body{
 
 /* third */
 
+
+
+.slidediv{
+    width: 100px;
+    height: 100px;  
+    transition: 0.5s;
+    
+  }
+  
+.slidediv:hover{
+    transform: translateY(-50px);
+}
+.slidediv:hover p{
+    opacity: 1;
+    transition: ease ease-in-out 0.5s;
+}
+.slidediv:hover .compo-img img{
+    opacity: 0;
+    transition:ease-in-out 0.3s;
+}
+
+
+span.hidden {
+    position:static;
+    bottom: -38px;
+    left: 263px;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s;
+  }
+  span.hidden p{
+    opacity: 0;
+    font-size: 16px;
+    color: #0672cb;
+  }
+
+  
+
 .compo-items{
     display: flex;
     width: 70%;
@@ -203,6 +282,7 @@ body{
     margin: auto;
     justify-content: space-around;
     padding: 25px;
+    
 }
 
 
@@ -229,6 +309,7 @@ body{
     display: flex;
     width: 100%;
     align-items: center;
+    
 }
 
 .data{
@@ -344,7 +425,7 @@ body{
 }
 
 .shadow{
-    box-shadow: 2px 2px 2px grey;
+    box-shadow: 1px 1px 1px grey;
     width: 33%;
 }
 
@@ -525,3 +606,40 @@ body{
     margin-left: 200px;
 }
 
+div #count{
+    background-color: #0063b8;
+    color: aliceblue;
+    width: 10px;
+    margin-right: 10px;
+}
+
+
+.overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* .menu-bar ul li a:hover+.sub-menu-1,
+.menu-bar ul li a:hover+.sub-menu-part1{
+    display: block;
+}
+
+.menu-bar ul li a:hover+.sub-menu-1,
+.menu-bar ul li a:hover+.sub-menu-part1{
+    display: block;
+}
+
+.menu-bar ul li a:hover+.sub-menu-1,
+.menu-bar ul li a:hover+.sub-menu-part1{
+    display: block;
+}
+
+.menu-bar ul li a:hover+.sub-menu-1,
+.menu-bar ul li a:hover+.sub-menu-part1,
+.menu-bar ul li a:hover+.overlay{
+    display: block;
+} */

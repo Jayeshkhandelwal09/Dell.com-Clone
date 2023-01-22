@@ -1,271 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Laptops, PC, Desktop Computers &amp; Monitors | Dell India</title>
     <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="cont">
-        <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/heroes/big-shopping-days-cons-dell-g-series-5525nt-uhp-2304-08-in-homepage-hero-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+    <header>
+        <!-- First part of header -->
+        <div class="overlay"></div>
+        <div class="first">
+
+            <div class="logo">
+                <img src="Next logo.png" alt="">
+            </div>
+
+            <div id="Search">
+                <input type="text" placeholder="Search Next">
+                <div>
+                    <img src="search.png" alt="" width="25px">
+                </div>
+                
+            </div>
+
+            <div class="pages">
+                
+                <div class="menu-bar">
+                    <ul>
+                        <li class="active"><a href="#" id="khatarnak">
+                            <img src="Laptops, PC, Desktop Computers & Monitors _ Dell India-5.svg" alt="" width="16px">Sign In</a>
+                            <div class="sub-menu-part1">
+                                <h5 ><a href="#" style="color: black;">Welcome to Dell</a></h5>
+                                <p><a href="#" style="color: black;">My Account</a></p>
+                               
+                                    <p class="li">Place orders quickly and easily</p>
+                                    <p class="li">View orders and track your shipping status</p>
+                                    <p class="li">Create and access a list of your products</p>
+                            
+                                <button id="signin-btn"><a href="signin.html">Sign In</a></button><br>
+                                <button id="signin-btn"><a href="Admin login.html">Admin Login</a></button><br>
+                                <button><a href="signup.html">Create an Acccount</a></button><br>
+                                <button>Premier Sign in</button><br>
+                                <button>Partner Program Sign In</button><br>    
+                        </div></li>
+                        <li class="active"><a href="#"><img src="Laptops, PC, Desktop Computers & Monitors _ Dell India-9.svg" alt="" width="16px">Contact Us</a></li>
+                        <li class="active"><a href="#"><img style="margin-right:5px"src="web.png" alt="" width="13px">IN/EN</a>
+                          
+                        <li class="active" style="margin-right: 8px;"><a href="cart.html"><span id="count"></span><img src="Laptops, PC, Desktop Computers & Monitors _ Dell India-8.svg" alt="" width="16px">Cart</a>
+                            
+                                <div>
+                                    <h5><a href="#"><span id="no-items" class="sub-menu-part1" style="margin-left: 3px; margin-right: 10px;" ></span></a></h5>
+                                </div>
+                               
+                                   
+                      </li>
+                    </ul>
+                </div>
+                
+
+
+            </div>
+
+
+
         </div>
-        <div style="margin: 30px 70px 0 0;"class="onliPad">
-            <div class="frstPtag">G SERIES LAPTOPS</div>
-            <h3>The Joy Of Winning</h3>
-            <p class='secndPtag'>Find exceptional savings on the latest tech. Get instant discount on UPI/Netbanking & JBL Earbuds.</p>
-            <P>*T&C apply.</P>
-            <a href="#" style="border-right: 1px solid#707070;">Start Gaming
-            </a>
-            <a href="#" style="padding: 0 0 0 20px">Learn More
-            </a>
+
+
+        <!-- Second part of header (Navbar) -->
+        <div class="menu-bar">
+            <ul>
+                <li class="active"><a href="#">APEX</a>
+                    <div class="sub-menu-1">
+                            <p><a href="#">View ALL APEX</a></p>
+                            <p><a href="#">Compute & HCI</a></p>
+                            <p><a href="#">Storage</a></p>
+                            <p><a href="#">Cyber & Data Protection</a></p>
+                            <p><a href="#">Create a Custom Solution</a></p>
+                            <p><a href="#">Resources</a></p>    
+                    </div>
+                </li>
+                <li><a href="shope.html">Product</a>
+                    <div class="sub-menu-1">
+                        <p><a href="#">Laptops</a></p>
+                        <p><a href="#">Desktop & All in One</a></p>
+                        <p><a href="#">Gaming</a></p>
+                        <p><a href="#">Workstations</a></p>
+                        <p><a href="#">Thin Clients</a></p>
+                        <p><a href="#">Servers</a></p>    
+                        <p><a href="#">Data Storage</a></p>    
+                        <p><a href="#">Data Protection/a></p>    
+                        <p><a href="#">Networking</a></p>    
+                        <p><a href="#">Hyperconverged Infrastructure</a></p>    
+                        <p><a href="#">Monitors</a></p>    
+                        <p><a href="#">Electronics & Accessories</a></p>    
+                </div>
+            </li>
+                <li><a href="#">Solutions</a>
+                    <div class="sub-menu-1">
+                        <p><a href="#">View All Solution</a></p>
+                        <p><a href="#">Cloud Solution</a></p>
+                        <p><a href="#">DevOps Tools & Solution</a></p>
+                        <p><a href="#">Edge Solution</a></p>
+                        <p><a href="#">Industry Solution</a></p>
+                        <p><a href="#">Infrastructure Solutions</a></p>    
+                        <p><a href="#">Midmarket Solutions</a></p>    
+                        <p><a href="#">GEM Solutions</a></p>    
+                        <p><a href="#">Security Solutions</a></p>    
+                        <p><a href="#">Small Business</a></p>    
+                        <p><a href="#">WorkForce Solutions</a></p>    
+                </div>
+            </li>
+                <li><a href="#">Services</a>
+                    <div class="sub-menu-1">
+                        <p><a href="#">View ALL Services</a></p>
+                        <p><a href="#">Consulting Services</a></p>
+                        <p><a href="#">deployment Services</a></p>
+                        <p><a href="#">Support Services</a></p>
+                        <p><a href="#">Education Services</a></p>
+                        <p><a href="#">Services Technology</a></p>    
+                        <p><a href="#">Payment & Consumption Solutions</a></p>    
+                </div>
+            </li>
+                <li><a href="#">Support</a>
+                     <div class="sub-menu-1">
+                    <p><a href="#">Support Home</a></p>
+                    <p><a href="#">Support Library</a></p>
+                    <p><a href="#">Support Services & Warranty</a></p>
+                    <p><a href="#">Drivers & download</a></p>
+                    <p><a href="#">Manual & Documentation</a></p>
+                    <p><a href="#">Diagonistic & Tools</a></p>    
+                    <p><a href="#">Service Request and Dipatch Status</a></p>    
+                    <p><a href="#">Order Support</a></p>    
+                    <p><a href="#">Contact Support</a></p>    
+                    <p><a href="#">Community</a></p>    
+            </div>
+        </li>
+                <li><a href="#">Deals</a>
+                    <div class="sub-menu-1">
+                        <p><a href="#">Laptops Deals</a></p>
+                        <p><a href="#">Desktop Deals</a></p>
+                        <p><a href="#">Gaming PC Deals</a></p>
+                        <p><a href="#">XPS Laptops Deals</a></p>
+                        <p><a href="#">XPS Laptops Deals</a></p>
+                        <p><a href="#">Workstation Deals</a></p>    
+                        <p><a href="#">Server Storage & Networking Deals</a></p>    
+                        <p><a href="#">Monitors Deals</a></p>    
+                        <p><a href="#">Computer Accessories Deals</a></p>    
+                        <p><a href="#">Employee Discounts</a></p>    
+                        <p><a href="#">Student Purchase Program</a></p>    
+                        <p><a href="#">Dell Professional Associations</a></p>    
+                </div>
+            </li>
+                <li><a href="map.html">Find a Store</a></li>
+                <li><a href="#">About Us</a>
+                    <div class="sub-menu-1">
+                        <p><a href="#">What We Do</a></p>
+                        <p><a href="#">Who Are We</a></p>
+                        <p><a href="#">Newsroom</a></p>
+                        <p><a href="#">ESG & Impact</a></p>
+                        <p><a href="#">Recycling</a></p>
+                        <p><a href="#">Investor</a></p>    
+                        <p><a href="#">Next Technologies Captial</a></p>    
+                        <p><a href="#">Carrers</a></p>    
+                        <p><a href="#">Perspectives</a></p>    
+                </div>
+            </li>
+            </ul>
+        </div>
+       
+          <!-- Third Part of the Header -->
+
+            <div class="third">
+                    <div class="compo-items">
+                        
+                        <div class="slidediv">
+                            <div class="compo-img">
+                                <img src="laptop.png" alt="">
+                            </div>
+                            
+                            <p>Laptops</p>
+                            <span class="hidden">
+                                <p>For Home</p>
+                                <p>For Business</p>
+                            </span>
+                        </div>
+                     
+
+                        <div class="slidediv">
+                            <div class="compo-img">
+                                <img src="monitor.png" alt="">
+                            </div>
+                            
+                            <p>Desktop</p>
+                            <span class="hidden">
+                                <p>For Home</p>
+                                <p>For Business</p>
+                            </span>
+                        </div>
+
+                        <div class="slidediv">
+                            <div class="compo-img">
+                                <img src="outer-space-alien.png" alt="">
+                            </div>
+                            
+                            <p>Alienware</p>
+                            <span class="hidden">
+                                <p>Laptops</p>
+                                <p>Desktop</p>
+                            </span>
+                        </div >
+
+                        <div class="slidediv">
+                            <div class="compo-img">
+                                <img src="laptop.png" alt="">
+                                
+                            </div>
+                            
+                            <p>Vostro</p>
+                            <span class="hidden">
+                                <p>For Home</p>
+                                <p>For Business</p>
+                            </span>
+                        </div>
+
+                        <div class="slidediv">
+                            <div class="compo-img">
+                                <img src="monitor.png" alt="">
+                            </div>
+                            
+                            <p>Montior</p>
+                            <span class="hidden">
+                                <p>For Home</p>
+                                <p>For Business</p>
+                            </span>
+                        </div>
+
+                        <div class="slidediv">
+                            <div class="compo-img">
+                                <img src="headphones.png" alt="">
+                            </div>
+                            
+                            <p>Accessories</p>
+                            <span class="hidden">
+                                <p>For Home</p>
+                                <p>For Business</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+    </header>
+
+
+    <main>
+
+    <!-- First container -->
+
+    <div class="republic">
+
+        <div class="data">
+            <p>REPUBLIC DAY OFFERS</p>
+            <h2>Be Free to Be More</h2>
+            <p>Get 10% cashback up to ₹5,000 on Citi cards & 2 years onsite warranty at ₹1*.</p>
+
+            <button>Shop Now</button>
+            <button id="btn1">Learn More</button>
+
+        </div>
+
+        <div class="data-img">
+            <img src="laptop.jpg" alt="">
         </div>
     </div>
-    <div class="cont">
+
+
+
+    <!-- Second Container -->
+
+    <h3 id="h3">Welcome Back</h3>
+
+    <div class="welcome">
+
+        <div class="shadow">
+            <h3 class="heading3">Best Seller</h3>
+            <hr>
+            <div class="imgdiv">
+                <div>
+                    <img src="https://i.dell.com/sites/csimages/UberHomePage_Imagery/all/xpss.png" alt="">
+                    
+                </div>
+                <h5 id="head5">Get Our Best Laptop for less</h5>
+                
+            </div>
+            <p>Shop Now</p>
+
+        </div>
+
         
-        <div style="margin: 30px 0 0 20px;" class="onliPad">
-            <div class="frstPtag">SERVERS, STORAGE, NETWORKING</div>
-            <h3>Flexible, Scalable IT Solutions</h3>
-            <p class='secndPtag'>Power transformation with server, storage and network solutions that adapt and scale to your business needs.</p>
-            <a href="#" style="border-right: 1px solid#707070;">Explore Servers</a>
-            <a href="#" style="padding: 0 0 0 20px">Explore Storage</a>
-        </div>
-        <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/servers-storage-network-left-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
-        </div>
-    </div>
-    <div class="single">
-        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/recyclinglogo-transparent-250x250.png?fmt=png-alpha&amp;wid=250&amp;hei=250" alt="">
-        <h2>Give Your Device A Second Life</h2>
-        <p>Join us in protecting the planet. Any brand accepted. It’s easy.</p>
-        <a href="#">Get Started</a>
-    </div>
-    <div class="cont">
-        <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-multiple-products/monitor/cs2303g0002-003-612559-gl-cs-co-fy23q3-site-banner-aw2723df-monitor-1023x842-left.png?fmt=png-alpha&amp;wid=1023&amp;hei=842" alt="">
-        </div>
-        <div style="margin: 30px 70px 0 0;"class="onliPad">
-            <div class="frstPtag">ALIENWARE 27 GAMING MONITOR</div>
-            <h3>Outshine Everyone</h3>
-            <p class='secndPtag'>Built-in bragging rights with premium performance, overclockable refresh rates up to 280Hz.</p>
-            <a href="#">Shop Now</a>
-        </div>
-    </div>
-    <div class="single">
-        <h2>Laptop Buying Guide</h2>
-        <p>Learn more about the types of Laptops & select the best model for your use.</p>
-        <a href="#">For Home</a>
-        <a href="#">For Business</a>
-    </div>
-    <div style="padding-top: 60px;"class="cont">
-        <div class="onliPad">
-            <div class="frstPtag">OPTIPLEX DESKTOPS</div>
-            <h3>Everything You Need. One Machine.</h3>
-            <p class='secndPtag'>All your everyday computing needs, designed together.</p>
-            <P>*T&C apply.</P>
-            <a href="#" style="border-right: 1px solid#707070;">Shop All</a>
-            <a href="#" style="padding: 0 0 0 20px">Shop Deals</p>
-        </div>
-        <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/show-desktop-aios-sb-dell-optiplex-24-7400nt-km7321w-uhp-2304-09-in-homepage-module-lf-1023x842-lr.png?fmt=png-alpha&amp;wid=1023&amp;hei=842" alt="">
-        </div>
-    </div>
-    <div class="cont">
-        <div style="height: 470px;"class="onliPad">
-            <div>POWERSTORE</div>
-            <h3>The Future of Storage is Now</h3>
-            <p class='secndPtag'>Future-proof intelligent storage that redefines performance.</p>
-            <a href="#">Learn More</a>
-        </div>
-        <div style="height: 520px;">
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/dell-powerstore-expan-bezel-lf-1023x842.png?fmt=png-alpha&amp;wid=1023&amp;hei=842" alt="">
-        </div>
-    </div>
-    <div class="cont" style="padding-bottom: 20px;">
-        <div id='inner1' class='inner'>
-            
-            <div class="frstPtag">SHOPPING DAYS</div>
-            <h3 class="head">Savings Unleashed</h3>
-            <p class="secndPtag">Win big, save big on the latest tech. Get 10% cashback on Citi cards or ₹10,000 instant discounts on netbanking. *T&C apply</p>
-            <a href="#">Gaming PC Deals</a>
-           
-            <img style="width: 100%;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/2-ups/big-shopping-days-cons-dell-g-series-5525nt-uhp-2304-08-in-homepage-2-up-module-800x400.png?fmt=pjpg&pscan=auto&scl=1&wid=800&hei=400&qlt=100,0&resMode=sharp2&size=800,400&op_usm=1.75,0.3,2,0" alt="">
-        </div>
-        <div id='inner2' class='inner'>
-            <div class="frstPtag">GAMING ACCESSORIES DEALS</div>
-            <h3 class="head">Elevate your gaming experience</h3>
-            <p class="secndPtag">Set the trend with high-performance gaming accessories.</p>
-            <a href="#">Gaming Accessories</a>
-            <img style="width: 100%" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/banners/q4w1-gaming-warm-2updeal2-aw510m-aw510k-800x400.jpg" alt="">
-        </div>
-    </div>
+        <div class="shadow">
+   
+                <h3 class="heading3">Laptop Buying Guide</h3>
+                <hr>
+    
+            <div class="heading5">
+                <h5 >Learn more about the types of Laptops &<br/>select the best model for your use.</h5>
+               
+            </div>
 
-   <footer class="foter">
-    <div id="ft_cont1">
-        <div class="small">
-                <a href="#">
-                    <img style="margin-right:5px"src="web.png" alt="" width="13px">IN/EN
-                <a>
+            <p>Learn More</p>
+        </div>
         
-            <a style="margin-top: 5px;"href="#">Site Map</a>
-        </div>
-        <div class="small">
-            <span class="span">Account</span>
-            <li>
-                <a href="#">My Account</a>
-            </li>
-            <li>
-                <a href="#">Order Status</a>
-            </li>
-            <li>
-                <a href="#">My Products</a>
-            </li>
 
-        </div>
-        <div class="small">
-          <span class="span">Support</span>
-          <li>
-            <a href="#">Support Home</a>
-          </li>
-          <li>
-            <a href="#">Contact Support</a>
-          </li>
-        </div>
-        <div class="small">
-          <span class="span">Connect With Us</span>
-          <li>
-            <a href="#">Community</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </div>
-    </div>
-
-    <div id="ft_cont2">
-        <div class="small">
-            <span class="span">Our Offerings</span>
-            <li>
-                <a href="#">APEX</a>
-            </li>
-            <li>
-                <a href="#">Products</a>
-            </li>
-            <li>
-                <a href="#">Solutions</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-        </div>
-        <div class="small">
-            <span class="span">Our Companies</span>
-            <li>
-                <a href="#">Who We Are</a>
-            </li>
-            <li>
-                <a href="#">Careers</a>
-            </li>
-            <li>
-                <a href="#">NEXT Technologies Capitals</a>
-            </li>
-            <li>
-                <a href="#">Investors</a>
-            </li>
-            <li>
-                <a href="#">Newsroom</a>
-            </li>
-            <li>
-                <a href="#">Perspectives</a>
-            </li>
-            <li>
-                <a href="#">Recyling</a>
-            </li>
-            <li>
-                <a href="#">ESG & Impact</a>
-            </li>
-
-        </div>
-        <div class="small">
-          <span class="span">Our Partners</span>
-          <li>
-            <a href="#">Find A Partner</a>
-          </li>
-          <li>
-            <a href="#">OEM Solutions</a>
-          </li>
-          <li>
-            <a href="#">Partner Program</a>
-          </li>
-        </div>
-         
-        <div class="small">
-          <span class="span">Resources</span>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Events</a>
-          </li>
-          <li>
-            <a href="#">NEXT Learning Centre</a>
-          </li>
-          <li>
-            <a href="#">Glossary</a>
-          </li>
-          <li>
-            <a href="#">Privacy Centre</a>
-          </li>
-          <li>
-            <a href="#">Resource Library</a>
-          </li>
-          <li>
-            <a href="#">Trial Software Downloads</a>
-          </li>
-        </div>
-    </div>
-
-    <nav id="ft_cont3Nav">
-       <ul class="ft_cont3">
-            <li style="width: 72.6625px;">
-                <a href="#">NEXT.Com</a>
-            </li>
-            <li style="width: 109.7;">
-                <a href="#">NEXT Technologies</a>
-            </li>
-            <li style="width: 48.6875;">
-                <a href="#">Premier</a>
-            </li>
-        </ul>
-    </nav>
-
-
-    <nav id="btmNav">
-        <ul id="ul">
-            <li style="width: 225px;">
-                <a class="nav" href="#">Copyright © 2023 NEXT Inc.</a>
-            </li>
-            <li style="width: 134px;"> 
-                <a class="nav" href="#">Terms of Sale</a>
-            </li>
-            <li style="width: 162px;">
-                <a class="nav" href="#">Privacy Statement</a>
-            </li>
-            <li style="width: 168px;">
-                <a class="nav" href="#">Legal & Regulatory</a>
-            </li>
-            <li style="width: 78.2875px;">
-                <a class="nav" href="#">Accessibility</a>
-            </li>
-        </ul>
+        <div class="shadow">
         
-    </nav>
-   </footer>
- 
+                <h3 class="heading3">Access My Account</h3>
+                <hr>
+    
+            <div class="heading5">
+                <h5 >Sign in to your account to track & view your orders.</h5>
+                
+            </div>
+
+            <p>Sign Up</p>
+        </div>
+       
+    </div>
+
+
+
+<!-- third container -->
+
+<div class="inspiron">
+
+    <div id="ins-img">
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/republic-day-cons-dell-inspiron-5420nt-uhp-2304-12-homepage-module-rf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+    </div>
+
+    <div class="ins-data">
+        <p id="ins-p1">INSPIRON LAPTOPS</p>
+        <h3>Power Your Success Story</h1>
+        <h5>Give yourself a tech edge with 10% cashback on Citi cards or instant discounts on UPI & headsets.</h5>
+        <p>*T&C apply.</p>
+
+        <div id="ins-span">
+            <h5 id="h51">Shop Now</h5><span>|</span><h5>Learn More</h5>
+        </div>
+        
+    </div>
+
+    
+</div>
+
+
+<!-- Fourth container -->
+
+<div class="Alienware">
+
+    <div class="ali-data">
+        <p id="ali-p1">ALIENWARE 27 GAMING MONITOR</p>
+        <h3>Outshine Everyone</h1>
+        <h5>Built-in bragging rights with premium performance,<br> overclockable refresh rates up to 280Hz and more.</h5>
+    
+
+        <div id="ali-span">
+            <h5 id="ali-h51">Shop Now</h5><span>|</span><h5>Learn More</h5>
+        </div>
+        
+    </div>
+
+    <div id="ali-img">
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/monitor-aw2723df-1.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+    </div>
+
+    
+</div>
+
+    </main>
+
+<!-- -------------------------------RAZ CODE-------------------------------------------- -->
+
+<div class="cont">
+    <div>
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/heroes/big-shopping-days-cons-dell-g-series-5525nt-uhp-2304-08-in-homepage-hero-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+    </div>
+    <div style="margin: 30px 70px 0 0;"class="onliPad">
+        <div class="frstPtag">G SERIES LAPTOPS</div>
+        <h3>The Joy Of Winning</h3>
+        <p class='secndPtag'>Find exceptional savings on the latest tech. Get instant discount on UPI/Netbanking & JBL Earbuds.</p>
+        <P>*T&C apply.</P>
+        <a href="#" style="border-right: 1px solid#707070;">Start Gaming
+        </a>
+        <a href="#" style="padding: 0 0 0 20px">Learn More
+        </a>
+    </div>
+</div>
+<div class="cont">
+    
+    <div style="margin: 30px 0 0 20px;" class="onliPad">
+        <div class="frstPtag">SERVERS, STORAGE, NETWORKING</div>
+        <h3>Flexible, Scalable IT Solutions</h3>
+        <p class='secndPtag'>Power transformation with server, storage and network solutions that adapt and scale to your business needs.</p>
+        <a href="#" style="border-right: 1px solid#707070;">Explore Servers</a>
+        <a href="#" style="padding: 0 0 0 20px">Explore Storage</a>
+    </div>
+    <div>
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/servers-storage-network-left-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+    </div>
+</div>
+<div class="single">
+    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/recyclinglogo-transparent-250x250.png?fmt=png-alpha&amp;wid=250&amp;hei=250" alt="">
+    <h2>Give Your Device A Second Life</h2>
+    <p>Join us in protecting the planet. Any brand accepted. It’s easy.</p>
+    <a href="#">Get Started</a>
+</div>
+<div class="cont">
+    <div>
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-multiple-products/monitor/cs2303g0002-003-612559-gl-cs-co-fy23q3-site-banner-aw2723df-monitor-1023x842-left.png?fmt=png-alpha&amp;wid=1023&amp;hei=842" alt="">
+    </div>
+    <div style="margin: 30px 70px 0 0;"class="onliPad">
+        <div class="frstPtag">ALIENWARE 27 GAMING MONITOR</div>
+        <h3>Outshine Everyone</h3>
+        <p class='secndPtag'>Built-in bragging rights with premium performance, overclockable refresh rates up to 280Hz.</p>
+        <a href="#">Shop Now</a>
+    </div>
+</div>
+<div class="single">
+    <h2>Laptop Buying Guide</h2>
+    <p>Learn more about the types of Laptops & select the best model for your use.</p>
+    <a href="#">For Home</a>
+    <a href="#">For Business</a>
+</div>
+<div style="padding-top: 60px;"class="cont">
+    <div class="onliPad">
+        <div class="frstPtag">OPTIPLEX DESKTOPS</div>
+        <h3>Everything You Need. One Machine.</h3>
+        <p class='secndPtag'>All your everyday computing needs, designed together.</p>
+        <P>*T&C apply.</P>
+        <a href="#" style="border-right: 1px solid#707070;">Shop All</a>
+        <a href="#" style="padding: 0 0 0 20px">Shop Deals</p>
+    </div>
+    <div>
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/show-desktop-aios-sb-dell-optiplex-24-7400nt-km7321w-uhp-2304-09-in-homepage-module-lf-1023x842-lr.png?fmt=png-alpha&amp;wid=1023&amp;hei=842" alt="">
+    </div>
+</div>
+<div class="cont">
+    <div style="height: 470px;"class="onliPad">
+        <div>POWERSTORE</div>
+        <h3>The Future of Storage is Now</h3>
+        <p class='secndPtag'>Future-proof intelligent storage that redefines performance.</p>
+        <a href="#">Learn More</a>
+    </div>
+    <div style="height: 520px;">
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/dell-powerstore-expan-bezel-lf-1023x842.png?fmt=png-alpha&amp;wid=1023&amp;hei=842" alt="">
+    </div>
+</div>
+<div class="cont" style="padding-bottom: 20px;">
+    <div id='inner1' class='inner'>
+        
+        <div class="frstPtag">SHOPPING DAYS</div>
+        <h3 class="head">Savings Unleashed</h3>
+        <p class="secndPtag">Win big, save big on the latest tech. Get 10% cashback on Citi cards or ₹10,000 instant discounts on netbanking. *T&C apply</p>
+        <a href="#">Gaming PC Deals</a>
+       
+        <img style="width: 100%;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/2-ups/big-shopping-days-cons-dell-g-series-5525nt-uhp-2304-08-in-homepage-2-up-module-800x400.png?fmt=pjpg&pscan=auto&scl=1&wid=800&hei=400&qlt=100,0&resMode=sharp2&size=800,400&op_usm=1.75,0.3,2,0" alt="">
+    </div>
+    <div id='inner2' class='inner'>
+        <div class="frstPtag">GAMING ACCESSORIES DEALS</div>
+        <h3 class="head">Elevate your gaming experience</h3>
+        <p class="secndPtag">Set the trend with high-performance gaming accessories.</p>
+        <a href="#">Gaming Accessories</a>
+        <img style="width: 100%" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/banners/q4w1-gaming-warm-2updeal2-aw510m-aw510k-800x400.jpg" alt="">
+    </div>
+</div>
+
+<footer class="foter">
+<div id="ft_cont1">
+    <div class="small">
+            <a href="#">
+                <img style="margin-right:5px"src="web.png" alt="" width="13px">IN/EN
+            <a>
+    
+        <a style="margin-top: 5px;"href="#">Site Map</a>
+    </div>
+    <div class="small">
+        <span class="span">Account</span>
+        <li>
+            <a href="#">My Account</a>
+        </li>
+        <li>
+            <a href="#">Order Status</a>
+        </li>
+        <li>
+            <a href="#">My Products</a>
+        </li>
+
+    </div>
+    <div class="small">
+      <span class="span">Support</span>
+      <li>
+        <a href="#">Support Home</a>
+      </li>
+      <li>
+        <a href="#">Contact Support</a>
+      </li>
+    </div>
+    <div class="small">
+      <span class="span">Connect With Us</span>
+      <li>
+        <a href="#">Community</a>
+      </li>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+    </div>
+</div>
+
+<div id="ft_cont2">
+    <div class="small">
+        <span class="span">Our Offerings</span>
+        <li>
+            <a href="#">APEX</a>
+        </li>
+        <li>
+            <a href="#">Products</a>
+        </li>
+        <li>
+            <a href="#">Solutions</a>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+    </div>
+    <div class="small">
+        <span class="span">Our Companies</span>
+        <li>
+            <a href="#">Who We Are</a>
+        </li>
+        <li>
+            <a href="#">Careers</a>
+        </li>
+        <li>
+            <a href="#">NEXT Technologies Capitals</a>
+        </li>
+        <li>
+            <a href="#">Investors</a>
+        </li>
+        <li>
+            <a href="#">Newsroom</a>
+        </li>
+        <li>
+            <a href="#">Perspectives</a>
+        </li>
+        <li>
+            <a href="#">Recyling</a>
+        </li>
+        <li>
+            <a href="#">ESG & Impact</a>
+        </li>
+
+    </div>
+    <div class="small">
+      <span class="span">Our Partners</span>
+      <li>
+        <a href="#">Find A Partner</a>
+      </li>
+      <li>
+        <a href="#">OEM Solutions</a>
+      </li>
+      <li>
+        <a href="#">Partner Program</a>
+      </li>
+    </div>
+     
+    <div class="small">
+      <span class="span">Resources</span>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Events</a>
+      </li>
+      <li>
+        <a href="#">NEXT Learning Centre</a>
+      </li>
+      <li>
+        <a href="#">Glossary</a>
+      </li>
+      <li>
+        <a href="#">Privacy Centre</a>
+      </li>
+      <li>
+        <a href="#">Resource Library</a>
+      </li>
+      <li>
+        <a href="#">Trial Software Downloads</a>
+      </li>
+    </div>
+</div>
+
+<nav id="ft_cont3Nav">
+   <ul class="ft_cont3">
+        <li style="width: 72.6625px;">
+            <a href="#">NEXT.Com</a>
+        </li>
+        <li style="width: 109.7;">
+            <a href="#">NEXT Technologies</a>
+        </li>
+        <li style="width: 48.6875;">
+            <a href="#">Premier</a>
+        </li>
+    </ul>
+</nav>
+
+
+<nav id="btmNav">
+    <ul id="ul">
+        <li style="width: 225px;">
+            <a class="nav" href="#">Copyright © 2023 NEXT Inc.</a>
+        </li>
+        <li style="width: 134px;"> 
+            <a class="nav" href="#">Terms of Sale</a>
+        </li>
+        <li style="width: 162px;">
+            <a class="nav" href="#">Privacy Statement</a>
+        </li>
+        <li style="width: 168px;">
+            <a class="nav" href="#">Legal & Regulatory</a>
+        </li>
+        <li style="width: 78.2875px;">
+            <a class="nav" href="#">Accessibility</a>
+        </li>
+    </ul>
+    
+</nav>
+</footer>
+
+
+
+
 
 </body>
+
+<script src="signin.js"></script>
+
+<script>
+    
+    let Name_Data = JSON.parse(localStorage.getItem("Name"))||[]
+    
+    let khatarnak = document.getElementById("khatarnak")
+
+    if(Name_Data[0]){
+        khatarnak.innerText = "👋" +"Hi" + " " + Name_Data[0]
+    }else{
+        khatarnak.innerText = "🤵"+" "+" Sign In"
+    }
+    
+
+
+
+    let count =  document.getElementById("no-items")
+
+    let cart_data=JSON.parse(localStorage.getItem("cart"))||[]
+    count.innerText = "No. of Items :"+ cart_data.length
+</script>
+
 
 </html>

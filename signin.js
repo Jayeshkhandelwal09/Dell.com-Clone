@@ -1,14 +1,17 @@
 let signinBtn=document.getElementById("signin")
+let userData=JSON.parse(localStorage.getItem("userData")) || []
 
 
-// khat.innerText="alok"
-let loginArr=[]
+
+
+let NameArr = [];
 
 signinBtn.addEventListener("click",()=>{
 
-    let userData=JSON.parse(localStorage.getItem("userData")) || []
+    
     let logEmail=document.getElementById("email").value
     let logPass=document.getElementById("pass").value
+    
 
     let isVaild=false
     let alName=""
@@ -23,16 +26,11 @@ signinBtn.addEventListener("click",()=>{
 
     if(isVaild){
         alert(`${alName} You Are Logged In Now`)
-        loginArr.push(alName)
-      
-       
-        
-
+        NameArr.push(alName)
+        localStorage.setItem("Name" , JSON.stringify(NameArr))
+        window.location.href = "./index.html"
     }else{
         alert(`Sorry Check Your Details Again`)
     }
 
-    // for(let i=0;i<loginArr.length;i++){
-    //     khat.innerText=loginArr[i]
-    // }
 })

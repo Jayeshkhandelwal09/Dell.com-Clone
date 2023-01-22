@@ -66,10 +66,6 @@
               <br><br>
               <input type="button" id="signn"value="LOG IN">
               <br>
-              <div class="end">
-                Not Register?
-                <a href="adminsignup.html">SIGN UP</a>
-              </div>
                
             </form>
           </div>
@@ -78,4 +74,61 @@
 
 
 </body>
+
+<script>
+  let admin_arr = [{
+    name : "Jayesh",
+    email : "jayesh@next.com",
+    password : "next5"
+  } ,
+  {
+    name : "Alok",
+    email : "alok@next.com",
+    password : "next5"
+  },
+  {
+    name : "Maaz",
+    email : "maaz@next.com",
+    password : "next5"
+  },
+  {
+    name : "Shankar",
+    email : "shankar@next.com",
+    password : "next5"
+  },
+  {
+    name : "Raz",
+    email : "raz@next.com",
+    password : "next5"
+  }]
+
+  let email = document.getElementById("mobile")
+
+  let password = document.getElementById("password")
+
+let admin_btn = document.getElementById("signn")
+
+
+admin_btn.addEventListener("click",()=>{
+  let isadmin = false
+  let name ;
+  for(let i=0;i<admin_arr.length;i++){
+  if(admin_arr[i].email === email.value){
+    if(admin_arr[i].password === password.value){
+      isadmin=true
+      name = admin_arr[i].name
+    }
+  }
+}
+if(isadmin){
+  alert( "Welcome" + " " + name  )
+  window.location.href = "./admin.html"
+}else{
+  alert("Wrong Credentials")
+}
+})
+
+
+</script>
+
 </html>

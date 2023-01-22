@@ -23,7 +23,7 @@ transform: none;
 transition: all Os ease Os;
 /* outline: rgb(255,0,0) dashed 0.8px; */
 box-sizing: border-box;
-margin-left: 450px;
+margin-left: 330px;
 
 
 }
@@ -161,7 +161,7 @@ box-sizing: border-box;
     <div class="main">
 
          <div id="heading">
-            <h2>Shipping</h2>
+            <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: 300; color: #006BBd; ">Shipping</h2>
          </div>
         
 
@@ -224,10 +224,25 @@ box-sizing: border-box;
     <input type="text" name="Name(Optional)" id="First"><br> 
     <label  id="lab" for="SA code(Optional)">SA code(Optional)</label><br>
     <input type="number" name="SA code(Optional)" id="First"><br>
-</div>
+</div>  
+
+<button style="margin-left: 280px; margin-top: 50px; padding: 10px; font-size: 20px; " id="redirect"><a href="#" style="text-decoration: none; list-style: none; color: black; font-weight: 600;">Place Order</a></button>
 
         </div>
 
 
 </body>
+
+<script>
+
+    let redirect = document.getElementById("redirect")
+
+    redirect.addEventListener("click", ()=>{
+        alert("Order Sucessfully Placed")
+        window.location.href = "./index.html"
+    })
+        
+    
+</script>
+
 </html>

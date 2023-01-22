@@ -301,6 +301,7 @@ createaccountBtn.addEventListener("click",()=>{
 
         localStorage.setItem("userData",JSON.stringify(userData))
         alert(`${firstName} Wellcome to NEXT`)
+        window.location.href = "./signin.html"
     }else{
         alert(`Sorry ${firstName} you are allready Registerd`)
     }

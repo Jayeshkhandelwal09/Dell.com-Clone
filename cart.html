@@ -1,189 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="cart.css">
-    <style>
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="cart.css">
        
-    </style>
-</head>
-<body>
-    <div class="container">
+       
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        <nav id="miniNav">
+            <span><img  src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjBweCIgeT0iMHB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiPjxzdHlsZT4uc3R5bGUwe2ZpbGw6ICM3Nzc3Nzc7fTwvc3R5bGU+PHBhdGggZD0iTTMwLjgyMSAxNy43NDZsLTMuMS0zLjMyMnYtMC4wNTVoLTAuMDUxbC0xMS42NjctMTIuNDk5LTExLjY3MSAxMi40OTloLTAuMDcwdjAuMDc1bC0zLjA4MyAzLjMwMiAxLjM3NiAxLjI4NCAxLjcwNS0xLjgyOHYxMi45MjhoOC45OTR2LTEwLjQ4OGg1LjQ2OHYxMC40ODhoOC45OTR2LTEyLjk0N2wxLjcyNCAxLjg0NyAxLjM4LTEuMjg0ek0yNS44MzggMjguMjQ4aC01LjIyOXYtMTAuNDg4aC05LjIzM3YxMC40ODhoLTUuMjMxdi0xMy4wNjRsOS44NTgtMTAuNTU2IDkuODM3IDEwLjUzOXYxMy4wODB6IiBjbGFzcz0ic3R5bGUwIi8+PC9zdmc+" alt=""></span>
+            <span>India</span>
+            <span><img style="width: 0.8%;" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjBweCIgeT0iMHB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB3aWR0aD0iMTcuMyIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDE3LjMgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE3LjMgMzIiPjxzdHlsZT4uc3R5bGUwe2ZpbGw6ICM3Nzc3Nzc7fTwvc3R5bGU+PHBhdGggZD0iTTE2LjksMTUuMUwyLjMsMC40Yy0wLjUtMC41LTEuNC0wLjUtMS45LDBzLTAuNSwxLjQsMCwxLjlMMTQuMSwxNkwwLjQsMjkuN2MtMC41LDAuNS0wLjUsMS40LDAsMS45czEuNCwwLjUsMS45LDAgbDE0LjctMTQuN0MxNy41LDE2LjQsMTcuNSwxNS42LDE2LjksMTUuMUwxNi45LDE1LjF6IiBjbGFzcz0ic3R5bGUwIi8+PC9zdmc+" alt=""></span>
+            <span> Home</span>
+            <span><img style="width: 0.8%;" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjBweCIgeT0iMHB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB3aWR0aD0iMTcuMyIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDE3LjMgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE3LjMgMzIiPjxzdHlsZT4uc3R5bGUwe2ZpbGw6ICM3Nzc3Nzc7fTwvc3R5bGU+PHBhdGggZD0iTTE2LjksMTUuMUwyLjMsMC40Yy0wLjUtMC41LTEuNC0wLjUtMS45LDBzLTAuNSwxLjQsMCwxLjlMMTQuMSwxNkwwLjQsMjkuN2MtMC41LDAuNS0wLjUsMS40LDAsMS45czEuNCwwLjUsMS45LDAgbDE0LjctMTQuN0MxNy41LDE2LjQsMTcuNSwxNS42LDE2LjksMTUuMUwxNi45LDE1LjF6IiBjbGFzcz0ic3R5bGUwIi8+PC9zdmc+" alt=""></span>
+            <span >Items</span>
+            <a href="cart.html" style="text-decoration: none;"><span><img style="width: 0.8%;" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjBweCIgeT0iMHB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB3aWR0aD0iMTcuMyIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDE3LjMgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE3LjMgMzIiPjxzdHlsZT4uc3R5bGUwe2ZpbGw6ICM3Nzc3Nzc7fTwvc3R5bGU+PHBhdGggZD0iTTE2LjksMTUuMUwyLjMsMC40Yy0wLjUtMC41LTEuNC0wLjUtMS45LDBzLTAuNSwxLjQsMCwxLjlMMTQuMSwxNkwwLjQsMjkuN2MtMC41LDAuNS0wLjUsMS40LDAsMS45czEuNCwwLjUsMS45LDAgbDE0LjctMTQuN0MxNy41LDE2LjQsMTcuNSwxNS42LDE2LjksMTUuMUwxNi45LDE1LjF6IiBjbGFzcz0ic3R5bGUwIi8+PC9zdmc+" alt=""></span>
+            <span class="collor">Cart</span></a>
+    
+        </nav>
+        <div class="container">
+    
+          
+    
+    
+        </div>
 
 
-
-
-    </div>
-</body>
-</html>
-
-
-
-<script>
-    let cart_data=JSON.parse(localStorage.getItem("cart"))||[]
-
- 
-console.log(cart_data)
-display_list(cart_data)
-
-
-
- function display_list(cart_data){
-     document.querySelector(".container").innerHTML=""
-     let card_list=
-     `
-     
-         <div class="cardList">  
-             ${
-                 cart_data.map((elem,i)=>
+    </body>
+    </html>
+    
+    
+    
+    <script>
+        let cart_data=JSON.parse(localStorage.getItem("cart"))||[]
+    
+    
+    console.log(cart_data)
+    display_list(cart_data)
+    
+    
+    
+     function display_list(cart_data){
+         document.querySelector(".container").innerHTML=""
+         let card_list=
+         `
+         
+             <div class="cardList">  
+                 ${
+                     cart_data.map((elem,i)=>
+                     
+                         creating_card(elem,i)
+                     )
                  
-                     creating_card(elem,i)
-                 )
-             
-             }
-         </div>
-     `
-     document.querySelector(".container").innerHTML=card_list
-     }
-
-         function creating_card(elem,i){
-             let card=`
-
- <div id="container">
-
-     <div id="cart-data">
-         <div id="data-name">
-             <p>Product Image</p> 
-             <p id="pro">Product name</p>
-             <p >Quantity</p>
-             <p>Price</p>
-         </div>
-         <hr>
-         <div id="four-div">
-             <div class="item-data">
-                 <div id="data-img">
-                     <img src="${elem.image}"/>
+                 }
+             </div>
+         `
+         document.querySelector(".container").innerHTML=card_list
+         }
+    
+             function creating_card(elem,i){
+                 let card=`
+                 
+     <div id="container" >
+        
+         <div id="cart-data">
+             <div id="data-name">
+                 <p>Product Image</p> 
+                 <p id="pro">Product name</p>
+                 <p >Quantity</p>
+                 <p>Price</p>
+             </div>
+             <hr>
+             <div id="four-div">
+                 <div class="item-data">
+                     <div id="data-img">
+                         <img src="${elem.image}"/>
+                     </div>
+                 </div>
+                 
+                 <div class="item-data">
+                     <h3>${elem.name}</h3>
+                 </div>
+     
+                 <div class="item-data">
+                     <select name="" id="selecting" onchange="change_quantity(event,${i})">
+                         <option value="1" ${elem.quantity==1 ? 'selected':''}>1</option>
+                         <option value="2" ${elem.quantity==2 ? 'selected':''}>2</option>
+                         <option value="3" ${elem.quantity==3 ? 'selected':''}>3</option>
+                         <option value="4" ${elem.quantity==4 ? 'selected':''}>4</option>
+                       </select><br>
+                       <button class="remove" onclick="delete_functionality(${i})">Remove</button>
+                 </div>
+     
+                 <div class="item-data">
+                     <p> ₹ ${elem.price * elem.quantity || elem.price} </p>
                  </div>
              </div>
+     
+             <div id="below-cart">
+                 <p>No Cost EMI available</p>
+                 <p>This item is eligible for No Cost EMI. Proceed to checkout to see how much you will save.</p>
+             </div>
              
-             <div class="item-data">
-                 <h3>${elem.name}</h3>
+             <div id="item-total">
+                 <p>Item total</p> 
+                 <p> ₹ ${elem.price * elem.quantity || elem.price}</p>
              </div>
- 
-             <div class="item-data">
-                 <select name="" id="selecting" onchange="change_quantity(event,${i})">
-                     <option value="0">0</option>
-                     <option value="1" ${elem.quantity==1 ? 'selected':''}>1</option>
-                     <option value="2" ${elem.quantity==2 ? 'selected':''}>2</option>
-                     <option value="3" ${elem.quantity==3 ? 'selected':''}>3</option>
-                     <option value="4" ${elem.quantity==4 ? 'selected':''}>4</option>
-                   </select><br>
-                   <button class="remove" onclick="delete_functionality(${i})">Remove</button>
-             </div>
- 
-             <div class="item-data">
-                 <p> ₹ ${elem.price * elem.quantity}</p>
-             </div>
+     
          </div>
- 
-         <div id="below-cart">
-             <p>No Cost EMI available</p>
-             <p>This item is eligible for No Cost EMI. Proceed to checkout to see how much you will save.</p>
-         </div>
-         
-         <div id="item-total">
-             <p>Item total</p> 
-             <p> ₹ ${elem.price * elem.quantity}</p>
-         </div>
- 
-     </div>
- 
- 
-     <div id="coupon-data">
-         <p id="coup">Coupon</p>
-         <input type="text" placeholder="Enter coupon" id="Discount">
-         <button id="cou" onclick="apply_coupon()">Apply Coupon</button>
-         <p id="agent"><span style="color:#006BBD";>Chat with an agent</span> or Call <span style="color:#006BBD";>1800-425-4002</span> for additional <br> help.</p>
-         <div style="border:1px solid #AAAAAA">
-         
-         <div class="numitem">
-             <p>Discounted Amount</p>
-             <p>${elem.discount}</p>
-         </div>
- 
-         <div class="numitem">
-             <p style="font-weight:700"; color:#444444;>Total Order Value</p>
-             <p style="font-weight:700"; color:#444444; >₹ ${elem.price * elem.quantity - elem.discount}</p>
+     
+     
+         <div id="coupon-data">
+             <p id="coup">Coupon</p>
+             <input type="text" placeholder="Enter coupon" id="Discount">
+             <button id="cou" onclick="apply_coupon()">Apply Coupon</button>
+             <p id="agent"><span style="color:#006BBD";>Chat with an agent</span> or Call <span style="color:#006BBD";>1800-425-4002</span> for additional <br> help.</p>
+             <div style="border:1px solid #AAAAAA">
              
+             <div class="numitem">
+                 <p>Discounted Amount</p>
+                 <p>${elem.discount ? elem.discount : ""}</p>
+             </div>
+     
+             <div class="numitem">
+                 <p style="font-weight:700"; color:#444444;>Total Order Value</p>
+                 <p style="font-weight:700"; color:#444444; >₹ ${ elem.price * elem.quantity - elem.discount  || elem.quantity * elem.price}</p>
+                 
+             </div>
+     
+             <p id="above">Above prices include Tax and Shipping</p>
+     
+             <button id="check" id="checkout-admin"><a href="checkout.html">Checkout</a></button><br>
+             <button id="conti">Continue Shipping</button>
+    
+             <div id="spanP">
+                 <p >Save cart</p><span>|</span><p>Email your cart</p>
+             </div>
+             
+             </div>
+     
          </div>
- 
-         <p id="above">Above prices include Tax and Shipping</p>
- 
-         <button id="check" class="checkout-admin">Checkout</button><br>
-         <button id="conti">Continue Shipping</button>
+     </div>    
+                 `
+    
+                 return card
+             }
+    
+    
+    function delete_functionality(i){
+     cart_data.splice(i,1)
+     console.log(cart_data)
+     // creating_card(cart_data)
+     display_list(cart_data)
+     localStorage.setItem("cart",JSON.stringify(cart_data))
+    }
+    
+    function change_quantity(e,i){
+     cart_data[i].quantity=Number(e.target.value) 
+     display_list(cart_data)
+     localStorage.setItem("cart",JSON.stringify(cart_data))
+     
+    }
+    
+    function apply_coupon(){
+     let discount=document.querySelector("#Discount").value
+     cart_data.forEach((element)=>{
+         element.discount=parseInt(discount)
+     })
+     display_list(cart_data)
+     localStorage.setItem("cart",JSON.stringify(cart_data))
+    
+    }
+    
 
-         <div id="spanP">
-             <p >Save cart</p><span>|</span><p>Email your cart</p>
-         </div>
-         
-         </div>
- 
-     </div>
- </div>    
-             `
+    let coupon_data = document.getElementById("coupon_data") 
+    console.log(cart_data)
 
-             return card
-         }
-
-
-function delete_functionality(i){
- cart_data.splice(i,1)
- console.log(cart_data)
- // creating_card(cart_data)
- display_list(cart_data)
- localStorage.setItem("cart",JSON.stringify(cart_data))
-}
-
-function change_quantity(e,i){
- cart_data[i].quantity=Number(e.target.value)
- display_list(cart_data)
- localStorage.setItem("cart",JSON.stringify(cart_data))
-
-}
-
-function apply_coupon(){
- let discount=document.querySelector("#Discount").value
- cart_data.forEach((element)=>{
-     element.discount=parseInt(discount)
- })
- display_list(cart_data)
- localStorage.setItem("cart",JSON.stringify(cart_data))
-
-}
-let admin_arr=[]
-let admin_data=document.querySelector(".checkout-admin")
-
-    admin_data.addEventListener("click",()=>{
-
-
-        // alert("hi")
-
-
-        admin_arr.push(cart_data)
-
-        localStorage.setItem("admins",JSON.stringify(admin_arr))
-
-
-    })
-
-
-
-
-
-
-
-
-</script>
+    if(cart_data.length > 1){
+        coupon_data.innerHTML =""
+    }
+    
+     
+    </script>
